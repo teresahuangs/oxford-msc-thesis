@@ -102,6 +102,28 @@ def show_graph_cmd(repo: str,
 
     show_graph(G, f"{repo} dependency licences")
 
+@app.command("show-graph")
+def show_graph_cmd(
+    repo: str,
+    local_path1: pathlib.Path = typer.Option(None, help="optional local checkout"),
+    gh_token: str = typer.Option(os.getenv("GITHUB_TOKEN")),
+):
+    """
+    Build dependency graph for REPO and save figure into ./figs/.
+    """
+    from ..core.github_api       import fetch_spdx_license
+    from ..core.dependency_parser import load_dependencies
+    from ..core.graph_tools       import build_graph, show_graph
+
+    root_lic = fetch_spdx_license(repo, gh_token) or "unknown"
+    deps     = load_dependencies(local_path1 or pathlib.Path("."), repo, gh_token)
+
+    G = build_graph(repo, root_lic, deps)
+    outfile = pathlib.Path("figs") / f"{repo.replace('/', '_')}_deps.png"
+    show_graph(G, repo, outfile=str(outfile))
+    typer.echo(f"Graph written to {outfile}")
+
+
 
 # ── run Typer CLI ─────────────────────────────────────────────────
 if __name__ == "__main__":
