@@ -40,20 +40,36 @@ def parse_requirements(req_path: pathlib.Path) -> List[Tuple[str, str]]:
     return deps
 
 # ─────────────────────────  C. GitHub fallback  ─────────────────────────
-def dependency_graph_api(repo: str, gh_token: str) -> List[Tuple[str,str]]:
-    """Minimal call to the REST dependency‑graph API (token must have the
-    `read:packages` and `repo` scopes)."""
+def dependency_graph_api(repo: str, gh_token: str) -> List[Dict]:
+    """Return list of dicts: {name, spdx, parent} for each dependency"""
     url = f"https://api.github.com/repos/{repo}/dependency-graph/sbom"
     hdr = {
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {gh_token}",
     }
     sbom = requests.get(url, headers=hdr).json()
+
+    # Build SPDX name → license mapping
+    license_map = {
+        p["SPDXID"]: _normalise_spdx(
+            p.get("licenseConcluded") or p.get("licenseDeclared") or ""
+        )
+        for p in sbom.get("packages", [])
+    }
+
+    # Build dependency edges using 'DEPENDS_ON' relationships
     deps = []
-    for pkg in sbom.get("packages", []):
-        lic = pkg.get("licenseConcluded") or pkg.get("licenseDeclared")
-        if lic:
-            deps.append((pkg["name"], _normalise_spdx(lic)))
+    for rel in sbom.get("relationships", []):
+        if rel.get("relationshipType") == "DEPENDS_ON":
+            src = rel.get("source")
+            tgt = rel.get("target")
+            tgt_license = license_map.get(tgt)
+            if tgt_license:
+                deps.append({
+                    "name": tgt,
+                    "spdx": tgt_license,
+                    "parent": src
+                })
     return deps
 
 # ─────────────────────────  Dispatcher  ─────────────────────────

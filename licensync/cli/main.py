@@ -1,7 +1,7 @@
 import typer, pathlib, os
 from ..core.github_api import fetch_spdx_license
-from ..core.dependency_parser import load_dependencies
-from ..core.graph_tools import build_graph, show_graph
+from ..core.dependency_parser import load_dependencies, dependency_graph_api
+from ..core.graph_tools import build_graph, show_graph, build_graph_recursive
 from ..core.prolog_interface import (
     evaluate_license_pair,
     obligations_for_license,
@@ -118,10 +118,9 @@ def show_graph_cmd(
     root_lic = fetch_spdx_license(repo, gh_token) or "unknown"
     deps     = load_dependencies(local_path1 or pathlib.Path("."), repo, gh_token)
 
-    G = build_graph(repo, root_lic, deps)
-    outfile = pathlib.Path("figs") / f"{repo.replace('/', '_')}_deps.png"
-    show_graph(G, repo, outfile=str(outfile))
-    typer.echo(f"Graph written to {outfile}")
+    deps = dependency_graph_api(repo, gh_token)
+    G = build_graph_recursive(repo, root_lic, deps)
+
 
 
 
