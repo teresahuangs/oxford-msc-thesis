@@ -64,8 +64,15 @@ def load_dependencies(repo_path: pathlib.Path, gh_repo: str = "",
     1. use lock / manifest if present,
     2. else fallback to GitHub API.
     """
-    if (repo_path / "package-lock.json").exists():
-        return parse_package_lock(repo_path / "package-lock.json")
+    # core/dependency_parser.py  (inside load_dependencies)
+    if (repo_path / "package.json").exists() and not (repo_path / "package-lock.json").exists():
+        # call license-checker on the fly
+        out = subprocess.check_output(
+            ["npx", "license-checker", "--json"], cwd=repo_path, text=True
+        )
+        data = json.loads(out)
+        return [(pkg, _normalise_spdx(meta["licenses"])) for pkg, meta in data.items()]
+
     if (repo_path / "requirements.txt").exists():
         return parse_requirements(repo_path / "requirements.txt")
     if gh_repo and gh_token:

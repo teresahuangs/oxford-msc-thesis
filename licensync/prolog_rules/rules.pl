@@ -1,97 +1,199 @@
+% Declare dynamic predicates
+:- dynamic license/2.
+:- dynamic jurisdiction/1.
+:- dynamic jurisdiction_obligation/3.
+
+% -----------------------------------------------------------------------------
+% SPDX License Definitions (core attributes)
+% -----------------------------------------------------------------------------
+
 license(mit, [
-    type("permissive"),
+    type(permissive),
     requires_disclosure(false),
     requires_notice(true),
-    restricts_field_of_use("none"),
-    jurisdiction_binding("global"),
+    restricts_field_of_use(none),
+    provenance_required(false),
+    noncommercial_only(false)
+]).
+
+license(apache2, [
+    type(permissive),
+    requires_disclosure(false),
+    requires_notice(true),
+    restricts_field_of_use(none),
     provenance_required(false),
     noncommercial_only(false)
 ]).
 
 license(gpl3, [
-    type("copyleft"),
+    type(copyleft),
     requires_disclosure(true),
     requires_notice(true),
-    restricts_field_of_use("none"),
-    jurisdiction_binding("global"),
+    restricts_field_of_use(none),
+    provenance_required(true),
+    noncommercial_only(false)
+]).
+
+license(sspl, [
+    type(restrictive),
+    requires_disclosure(true),
+    requires_notice(true),
+    restricts_field_of_use(cloud_services),
     provenance_required(true),
     noncommercial_only(false)
 ]).
 
 license(llama_nc, [
-    type("restrictive"),
+    type(restrictive),
     requires_disclosure(false),
     requires_notice(true),
-    restricts_field_of_use("commercial"),
-    jurisdiction_binding("us"),
+    restricts_field_of_use(commercial),
     provenance_required(true),
     noncommercial_only(true)
 ]).
 
 license(openrail, [
-    type("restrictive"),
+    type(restrictive),
     requires_disclosure(false),
     requires_notice(true),
-    restricts_field_of_use("military"),
-    jurisdiction_binding("global"),
+    restricts_field_of_use(military),
     provenance_required(true),
     noncommercial_only(false)
 ]).
 
-license(apache2, [
-    type("permissive"),
-    requires_disclosure(false),
-    requires_notice(true),
-    restricts_field_of_use("none"),
-    jurisdiction_binding("global"),
-    provenance_required(false),
-    noncommercial_only(false)
-]).
-
-
-license_fallback(mit, permissive).
-license_fallback(gpl3, copyleft).
-license_fallback(apache2, permissive).
-license_fallback(sspl, restrictive).
+% -----------------------------------------------------------------------------
+% Jurisdictions
+% -----------------------------------------------------------------------------
 
 jurisdiction(global).
 jurisdiction(us).
+jurisdiction(eu).
+jurisdiction(cn).
 
-type(L, Type) :-
+% -----------------------------------------------------------------------------
+% Jurisdiction-specific overrides
+% -----------------------------------------------------------------------------
+
+% Format: jurisdiction_obligation(+Jurisdiction, +Obligation, +Value).
+
+jurisdiction_obligation(global, noncommercial_only, enforce_if_money_given).
+jurisdiction_obligation(us, noncommercial_only, enforce_if_sold).
+jurisdiction_obligation(eu, provenance_required, true).
+jurisdiction_obligation(cn, provenance_required, true).
+
+% -----------------------------------------------------------------------------
+% Expression evaluation (support SPDX-style "AND", "OR")
+% -----------------------------------------------------------------------------
+
+evaluate_expression(License, Jurisdiction, Result) :-
+    atom(License),
+    evaluate_license(License, Jurisdiction, Result).
+
+evaluate_expression((L1 ; L2), Jurisdiction, Result) :-
+    (evaluate_expression(L1, Jurisdiction, ok);
+     evaluate_expression(L2, Jurisdiction, ok)),
+    Result = ok.
+
+evaluate_expression((L1 , L2), Jurisdiction, Result) :-
+    evaluate_expression(L1, Jurisdiction, ok),
+    evaluate_expression(L2, Jurisdiction, ok),
+    Result = ok.
+
+evaluate_expression(_, _, Result) :-
+    Result = 'Incompatible or unsupported expression'.
+
+% -----------------------------------------------------------------------------
+% Compatibility rules
+% -----------------------------------------------------------------------------
+
+evaluate_license(L, _, unknown_license) :-
+    \+ license(L, _).
+
+evaluate_license(L, Jurisdiction, ok) :-
+    license(L, _),
+    license_compatible(L, Jurisdiction).
+
+license_compatible(L, Jurisdiction) :-
     license(L, Props),
-    member(type(Type), Props).
+    \+ ( member(noncommercial_only(true), Props),
+         jurisdiction_obligation(Jurisdiction, noncommercial_only, enforce_if_sold) ).
 
-type(L, Type) :-
-    license_fallback(L, Type).
+% -----------------------------------------------------------------------------
+% Obligation queries
+% -----------------------------------------------------------------------------
 
+requires_provenance(L, Jurisdiction) :-
+    license(L, Props),
+    ( member(provenance_required(true), Props)
+    ; jurisdiction_obligation(Jurisdiction, provenance_required, true) ).
 
-requires_source_disclosure(L, Jurisdiction) :-
-    type(L, copyleft),
-    Jurisdiction = eu.
+restricts_commercial_use(L) :-
+    license(L, Props),
+    member(noncommercial_only(true), Props).
 
-incompatible(L1, L2) :-
-    type(L1, copyleft),
-    type(L2, restrictive),
-    L1 \= L2.
+% -----------------------------------------------------------------------------
+% Compatibility Explanation
+% -----------------------------------------------------------------------------
 
-compatible(L1, L2) :-
-    type(L1, permissive),
-    type(L2, permissive).
+compatibility_explanation(L, Jurisdiction, Explanation) :-
+    evaluate_license(L, Jurisdiction, ok),
+    format(atom(Explanation), "~w is compatible under ~w", [L, Jurisdiction]).
 
-compatible(L1, L2) :-
-    type(L1, permissive),
-    type(L2, copyleft).
+compatibility_explanation(L, Jurisdiction, Explanation) :-
+    restricts_commercial_use(L),
+    jurisdiction_obligation(Jurisdiction, noncommercial_only, enforce_if_sold),
+    format(atom(Explanation), "~w restricts commercial use under ~w law", [L, Jurisdiction]).
 
-evaluate_pair(L1, L2, Jurisdiction, Result) :-
-    incompatible(L1, L2),
-    Result = 'Incompatible under all jurisdictions'.
+compatibility_explanation(_, _, 'Compatibility could not be determined.').
 
-evaluate_pair(L1, L2, Jurisdiction, Result) :-
-    requires_source_disclosure(L2, Jurisdiction),
-    format(atom(Result), "~w requires source disclosure under ~w law", [L2, Jurisdiction]).
+% --------------------------------------------------------------------------
+%  Helper: get a property value with a fallback
+% --------------------------------------------------------------------------
+license_prop_or_default(Lic, PropName, Default, Value) :-
+    license(Lic, Props),
+    (   member(PropTerm, Props),
+        PropTerm =.. [PropName, Value]
+    ->  true
+    ;   Value = Default).
 
-evaluate_pair(L1, L2, _, Result) :-
-    compatible(L1, L2),
-    format(atom(Result), "~w and ~w are compatible", [L1, L2]).
+% --------------------------------------------------------------------------
+%  Obligation summary  (deterministic, no endless back-tracking)
+% --------------------------------------------------------------------------
+evaluate_license_obligations(Lic, Jur, ObligList) :-
+    license(Lic, _),                 % fail fast if unknown licence
+    % basic props
+    license_prop_or_default(Lic, requires_notice,     false,  Notice),
+    license_prop_or_default(Lic, requires_disclosure, false,  Disclosure),
+    license_prop_or_default(Lic, restricts_field_of_use, none, Field),
 
-evaluate_pair(_, _, _, "Compatibility cannot be determined.").
+    % provenance (jurisdiction-aware)
+    (requires_provenance(Lic, Jur) -> Prov = true ; Prov = false),
+
+    % non-commercial (jurisdiction-aware)
+    (interpreted_noncommercial(Lic, Jur, true) -> NC = true ; NC = false),
+
+    ObligList = [
+        requires_notice(Notice),
+        requires_disclosure(Disclosure),
+        provenance_required(Prov),
+        noncommercial_only(NC),
+        restricts_field_of_use(Field)
+    ], !.     % cut – make the predicate deterministic
+
+% --------------------------------------------------------------------------
+%  Determine whether the non-commercial clause is enforced in a jurisdiction
+% --------------------------------------------------------------------------
+
+% Global: always enforce if the licence itself is non-commercial
+interpreted_noncommercial(Lic, global, true) :-
+    license(Lic, Props),
+    member(noncommercial_only(true), Props), !.
+
+% US: only enforce if NC=true *and* jurisdiction overrides say “enforce_if_sold”
+interpreted_noncommercial(Lic, us, true) :-
+    license(Lic, Props),
+    member(noncommercial_only(true), Props),
+    jurisdiction_obligation(us, noncommercial_only, enforce_if_sold), !.
+
+% Other cases → false
+interpreted_noncommercial(_, _, false).
