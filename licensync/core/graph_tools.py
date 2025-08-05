@@ -1,5 +1,33 @@
 import networkx as nx, matplotlib.pyplot as plt
 
+# ──────────────────────────────────────────────────────────────
+# 3.  (optional) recursive builder for SBOM JSON
+#     deps  ≙  List[Dict{name, spdx, parent?}]
+# ──────────────────────────────────────────────────────────────
+def build_graph_recursive(root_name: str,
+                          root_license: str,
+                          deps_json) -> nx.DiGraph:
+    """
+    Accepts the raw list returned by GitHub SBOM:
+        [{'name': 'react', 'spdx': 'mit', 'parent': None},
+         {'name': 'object-assign', 'spdx': 'mit',
+                                        'parent': 'react'}, ...]
+    """
+    G = nx.DiGraph()
+    G.add_node(root_name, license=root_license, kind="root")
+
+    for row in deps_json:
+        pkg  = row["name"]
+        spdx = row.get("spdx", "unknown").lower()
+
+        G.add_node(pkg, license=spdx, kind="package")
+
+        parent = row.get("parent") or root_name
+        G.add_edge(parent, pkg, scope="runtime")
+
+    return G
+
+
 def build_graph(root_name: str, root_license: str,
                 deps: list[tuple[str,str]]) -> nx.DiGraph:
     g = nx.DiGraph()

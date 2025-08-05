@@ -60,6 +60,14 @@ license(openrail, [
     provenance_required(true),
     noncommercial_only(false)
 ]).
+% ------------------------------------------------------------------
+%  Helper: type(+Licence, -TypeAtom)
+%          Extracts the 'type(...)' property from licence facts
+%          TypeAtom ∈ {permissive, copyleft, restrictive}
+% ------------------------------------------------------------------
+type(Lic, Type) :-
+    license(Lic, Props),
+    member(type(Type), Props).
 
 % -----------------------------------------------------------------------------
 % Jurisdictions
@@ -102,21 +110,44 @@ evaluate_expression((L1 , L2), Jurisdiction, Result) :-
 evaluate_expression(_, _, Result) :-
     Result = 'Incompatible or unsupported expression'.
 
-% -----------------------------------------------------------------------------
-% Compatibility rules
-% -----------------------------------------------------------------------------
 
+% -----------------------------------------------------------------------------
+% Compatibility rules (deterministic)
+% -----------------------------------------------------------------------------
+% 1.  Unknown licence  → incompatible
 evaluate_license(L, _, unknown_license) :-
-    \+ license(L, _).
+    \+ license(L, _), !.
 
-evaluate_license(L, Jurisdiction, ok) :-
-    license(L, _),
-    license_compatible(L, Jurisdiction).
+% 2.  Explicit incompatibilities
+%    ───────────────────────────
+%    (a) copyleft  ×  restrictive
+evaluate_license(L1, _, incompatible) :-
+    type(L1, copyleft),  !,
+    fail.   % will be caught by (6)
 
-license_compatible(L, Jurisdiction) :-
-    license(L, Props),
-    \+ ( member(noncommercial_only(true), Props),
-         jurisdiction_obligation(Jurisdiction, noncommercial_only, enforce_if_sold) ).
+evaluate_license(L1, _, incompatible) :-
+    type(L1, restrictive),
+    !,      % restrictive with anything non-restrictive is incompatible
+    fail.
+
+% 3.  permissive × permissive  → compatible
+evaluate_license(L, _, ok) :-
+    type(L, permissive), !.
+
+% 4.  permissive × copyleft    → compatible  (assumes entire work is copyleft)
+evaluate_license(L, _, ok) :-
+    type(L, copyleft), !.
+
+% 5.  restrictive × restrictive
+%    Compatible only if it is the *same* licence ID
+evaluate_license(L1, _, ok) :-
+    type(L1, restrictive),
+    license(L1, _),   % same licence on the other side
+    !.
+
+% 6.  Catch-all  → incompatible
+evaluate_license(_, _, incompatible).
+
 
 % -----------------------------------------------------------------------------
 % Obligation queries
@@ -145,6 +176,38 @@ compatibility_explanation(L, Jurisdiction, Explanation) :-
     format(atom(Explanation), "~w restricts commercial use under ~w law", [L, Jurisdiction]).
 
 compatibility_explanation(_, _, 'Compatibility could not be determined.').
+
+% ────────────────────────────────────────────────────────────────────
+%  Pair-wise compatibility (covers every case; no silent fall-through)
+%  evaluate_pair(+L1,+L2,+Jurisdiction,-ResultAtom)
+%    ResultAtom = ok | incompatible | unknown_license
+% ────────────────────────────────────────────────────────────────────
+
+evaluate_pair(L1, L2, _, unknown_license) :-
+    (\+ license(L1, _); \+ license(L2, _)), !.
+
+% 1. Identical licence → always ok
+evaluate_pair(L, L, _, ok) :- !.
+
+% 2. Any 'restrictive' with a DIFFERENT licence id ⇒ incompatible
+evaluate_pair(L1, L2, _, incompatible) :-
+    type(L1, restrictive), L1 \== L2, !.
+evaluate_pair(L1, L2, _, incompatible) :-
+    type(L2, restrictive), L1 \== L2, !.
+
+% 3. copyleft × permissive  ⇒ incompatible
+evaluate_pair(L1, L2, _, incompatible) :-
+    type(L1, copyleft),  type(L2, permissive), !.
+evaluate_pair(L1, L2, _, incompatible) :-
+    type(L2, copyleft),  type(L1, permissive), !.
+
+% 4. copyleft × copyleft  (different ids) ⇒ incompatible
+evaluate_pair(L1, L2, _, incompatible) :-
+    type(L1, copyleft), type(L2, copyleft), L1 \== L2, !.
+
+% 5. Everything else falls through to ok
+evaluate_pair(_, _, _, ok).
+
 
 % --------------------------------------------------------------------------
 %  Helper: get a property value with a fallback

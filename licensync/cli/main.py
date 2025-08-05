@@ -4,7 +4,8 @@ from ..core.dependency_parser import load_dependencies
 from ..core.graph_tools import build_graph, show_graph
 from ..core.prolog_interface import (
     evaluate_license_pair,
-    obligations_for_license      # ← new helper you expose
+    obligations_for_license,
+    verdict_and_obligs      # ← new helper you expose
 )
 from ..core.llm_explainer import generate_explanation
 
@@ -43,11 +44,26 @@ def check(l1: str, l2: str, jurisdiction: str):
 # ── 3. explanation with LLM (kept) ─────────────────────────────────
 @app.command("explain")
 def explain(license1: str, license2: str, jurisdiction: str):
-    verdict = evaluate_license_pair(license1.lower(), license2.lower(), jurisdiction.lower())
+    # ▲  get verdict + obligations from Prolog
+    verdict, obls1, obls2 = verdict_and_obligs(
+        license1.lower(), license2.lower(), jurisdiction.lower()
+    )
+
     typer.echo(f"Compatibility verdict: {verdict}")
-    explanation = generate_explanation(license1, license2, jurisdiction, verdict)
+
+    # ▼  ALWAYS print the obligations so the user sees something
+    typer.echo("\nObligations:")
+    typer.echo(f"  {license1.upper()}: {', '.join(obls1) or '(none)'}")
+    typer.echo(f"  {license2.upper()}: {', '.join(obls2) or '(none)'}")
+
+    # ▼  call the LLM explainer (returns placeholder if quota exhausted)
+    explanation = generate_explanation(
+        license1, license2, jurisdiction, verdict, obls1, obls2
+    )
+
     typer.echo("\nExplanation:")
     typer.echo(explanation)
+
 
 # ── 4. NEW: obligations for a single licence in a jurisdiction ────
 @app.command("license-info")
@@ -62,6 +78,30 @@ def license_info(
     typer.echo(f"Obligations for {license_id} under {jurisdiction}:")
     for o in obls:
         typer.echo(f"  • {o}")
+
+@app.command("show-graph")
+def show_graph_cmd(repo: str,
+                   jurisdiction: str = typer.Option("global",
+                                help="ignored – kept for symmetry"),
+                   gh_token: str = typer.Option(
+                       os.getenv("GITHUB_TOKEN"),
+                       help="GitHub personal-access token")):
+    """
+    Pull SBOM from GitHub and draw dependency-licence graph.
+    """
+    from ..core.dependency_parser import dependency_graph_api
+    from ..core.graph_tools        import build_graph_recursive, show_graph
+
+    sbom = dependency_graph_api(repo, gh_token)
+    root_lic = fetch_spdx_license(repo, gh_token) or "unknown"
+
+    G = build_graph_recursive(repo, root_lic, [
+            {"name": p, "spdx": l, "parent": root} for root, (p, l) in
+            [(repo, pair) for pair in sbom]    # flatten
+        ])
+
+    show_graph(G, f"{repo} dependency licences")
+
 
 # ── run Typer CLI ─────────────────────────────────────────────────
 if __name__ == "__main__":
