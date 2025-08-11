@@ -6,6 +6,51 @@
 % -----------------------------------------------------------------------------
 % SPDX License Definitions (core attributes)
 % -----------------------------------------------------------------------------
+% --- Additional SPDX licence facts ---
+license(bsd3, [
+    type(permissive),
+    requires_disclosure(false),
+    requires_notice(true),
+    restricts_field_of_use(none),
+    provenance_required(false),
+    noncommercial_only(false)
+]).
+
+license(bsd2, [
+    type(permissive),
+    requires_disclosure(false),
+    requires_notice(true),
+    restricts_field_of_use(none),
+    provenance_required(false),
+    noncommercial_only(false)
+]).
+
+license(mpl2, [
+    type(copyleft),
+    requires_disclosure(true),
+    requires_notice(true),
+    restricts_field_of_use(none),
+    provenance_required(false),
+    noncommercial_only(false)
+]).
+
+license(lgpl3, [
+    type(copyleft),
+    requires_disclosure(true),
+    requires_notice(true),
+    restricts_field_of_use(none),
+    provenance_required(false),
+    noncommercial_only(false)
+]).
+
+license(agpl3, [
+    type(copyleft),
+    requires_disclosure(true),
+    requires_notice(true),
+    restricts_field_of_use(none),
+    provenance_required(true),
+    noncommercial_only(false)
+]).
 
 license(mit, [
     type(permissive),
