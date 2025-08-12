@@ -1,0 +1,13 @@
+repo,sha
+pandas-dev/pandas,
+scikit-learn/scikit-learn,
+apache/airflow,
+pallets/flask,
+scrapy/scrapy,
+twisted/twisted,
+matplotlib/matplotlib,
+seaborn/seaborn,
+tiangolo/fastapi,
+encode/uvicorn,
+jupyter/notebook,
+jupyterlab/jupyterlab,

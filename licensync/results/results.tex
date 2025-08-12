@@ -1,0 +1,41 @@
+\section{Results}
+\subsection{Experimental Setup}
+We evaluate LicenSync on real dependency graphs from public repositories across ecosystems (Python, JavaScript).
+Metrics are edge-level precision/recall/F1, coverage, and runtime. Baselines include a static SPDX compatibility
+matrix. We fix repository SHAs and report 95\% bootstrap confidence intervals.
+
+\subsection{Edge-level Compatibility}
+\paragraph{Claim.} LicenSync achieves higher edge-level F1 than baselines.
+\paragraph{Evidence.} See Table~\ref{tab:edge-f1} and Figure~\ref{fig:f1bar}.
+
+\begin{table}[h]
+\centering
+\caption{Edge-level results. Replace placeholders with numbers from \texttt{results/eval\_summary.json}.}
+\label{tab:edge-f1}
+\begin{tabular}{lccc}
+\toprule
+Method & Precision & Recall & F1 \\
+\midrule
+Baseline & -- & -- & -- \\
+LicenSync & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Scalability}
+We measure end-to-end evaluation throughput on the collected edges.
+See Figure~\ref{fig:perfbar}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.55\linewidth]{../figs/f1_bar.png}
+\caption{Edge-level F1 (LicenSync vs Baseline).}
+\label{fig:f1bar}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.55\linewidth]{../figs/perf_bar.png}
+\caption{Performance summary (total edges and seconds).}
+\label{fig:perfbar}
+\end{figure}

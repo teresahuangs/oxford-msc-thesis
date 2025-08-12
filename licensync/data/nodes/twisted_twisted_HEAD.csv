@@ -1,0 +1,13 @@
+repo,sha,name,license,is_root
+twisted/twisted,,twisted/twisted,unknown,True
+twisted/twisted,,com.github.twisted/twisted,unknown,False
+twisted/twisted,,CodSpeedHQ/action,unknown,False
+twisted/twisted,,codecov/codecov-action,unknown,False
+twisted/twisted,,twisted/python-info-action,unknown,False
+twisted/twisted,,pypa/gh-action-pypi-publish,unknown,False
+twisted/twisted,,actions/checkout,unknown,False
+twisted/twisted,,actions/download-artifact,unknown,False
+twisted/twisted,,actions/cache,unknown,False
+twisted/twisted,,mxschmitt/action-tmate,unknown,False
+twisted/twisted,,actions/upload-artifact,unknown,False
+twisted/twisted,,actions/setup-python,unknown,False

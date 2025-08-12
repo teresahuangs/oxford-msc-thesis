@@ -1,0 +1,32 @@
+repo,sha,parent,child,lic_parent,lic_child
+pallets/flask,,com.github.pallets/flask,kombu,unknown,BSD-2-Clause
+pallets/flask,,com.github.pallets/flask,click-plugins,unknown,BSD-2-Clause AND BSD-3-Clause
+pallets/flask,,com.github.pallets/flask,redis,unknown,MIT
+pallets/flask,,com.github.pallets/flask,werkzeug,unknown,unknown
+pallets/flask,,com.github.pallets/flask,pypa/gh-action-pypi-publish,unknown,unknown
+pallets/flask,,com.github.pallets/flask,jinja2,unknown,unknown
+pallets/flask,,com.github.pallets/flask,click-repl,unknown,unknown
+pallets/flask,,com.github.pallets/flask,wcwidth,unknown,MIT
+pallets/flask,,com.github.pallets/flask,six,unknown,MIT
+pallets/flask,,com.github.pallets/flask,markupsafe,unknown,unknown
+pallets/flask,,com.github.pallets/flask,async-timeout,unknown,Apache-2.0
+pallets/flask,,com.github.pallets/flask,click-didyoumean,unknown,MIT
+pallets/flask,,com.github.pallets/flask,billiard,unknown,BSD-2-Clause
+pallets/flask,,com.github.pallets/flask,click,unknown,unknown
+pallets/flask,,com.github.pallets/flask,actions/upload-artifact,unknown,unknown
+pallets/flask,,com.github.pallets/flask,celery,unknown,BSD-2-Clause
+pallets/flask,,com.github.pallets/flask,actions/setup-python,unknown,unknown
+pallets/flask,,com.github.pallets/flask,astral-sh/setup-uv,unknown,unknown
+pallets/flask,,com.github.pallets/flask,actions/download-artifact,unknown,unknown
+pallets/flask,,com.github.pallets/flask,vine,unknown,BSD-2-Clause
+pallets/flask,,com.github.pallets/flask,amqp,unknown,BSD-2-Clause
+pallets/flask,,com.github.pallets/flask,dessant/lock-threads,unknown,unknown
+pallets/flask,,com.github.pallets/flask,pre-commit-ci/lite-action,unknown,unknown
+pallets/flask,,com.github.pallets/flask,actions/cache,unknown,unknown
+pallets/flask,,com.github.pallets/flask,pytest,unknown,unknown
+pallets/flask,,com.github.pallets/flask,flask,unknown,unknown
+pallets/flask,,com.github.pallets/flask,itsdangerous,unknown,unknown
+pallets/flask,,com.github.pallets/flask,prompt-toolkit,unknown,BSD-2-Clause AND BSD-3-Clause
+pallets/flask,,com.github.pallets/flask,blinker,unknown,MIT
+pallets/flask,,com.github.pallets/flask,pytz,unknown,MIT
+pallets/flask,,com.github.pallets/flask,actions/checkout,unknown,unknown

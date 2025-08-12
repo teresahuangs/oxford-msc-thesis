@@ -1,0 +1,31 @@
+repo,sha,name,license,is_root
+scrapy/scrapy,,scrapy/scrapy,unknown,True
+scrapy/scrapy,,com.github.scrapy/scrapy,unknown,False
+scrapy/scrapy,,defusedxml,unknown,False
+scrapy/scrapy,,actions/setup-python,unknown,False
+scrapy/scrapy,,codecov/codecov-action,unknown,False
+scrapy/scrapy,,cssselect,unknown,False
+scrapy/scrapy,,parsel,unknown,False
+scrapy/scrapy,,lxml,unknown,False
+scrapy/scrapy,,pypydispatcher,unknown,False
+scrapy/scrapy,,twisted,unknown,False
+scrapy/scrapy,,tldextract,unknown,False
+scrapy/scrapy,,pypa/gh-action-pypi-publish,unknown,False
+scrapy/scrapy,,sphinx-rtd-theme,MIT AND OFL-1.1,False
+scrapy/scrapy,,itemadapter,unknown,False
+scrapy/scrapy,,packaging,unknown,False
+scrapy/scrapy,,pyopenssl,unknown,False
+scrapy/scrapy,,pydispatcher,unknown,False
+scrapy/scrapy,,queuelib,unknown,False
+scrapy/scrapy,,cryptography,unknown,False
+scrapy/scrapy,,pre-commit/action,unknown,False
+scrapy/scrapy,,sphinx-rtd-dark-mode,MIT,False
+scrapy/scrapy,,sphinx-notfound-page,MIT,False
+scrapy/scrapy,,protego,unknown,False
+scrapy/scrapy,,itemloaders,unknown,False
+scrapy/scrapy,,actions/checkout,unknown,False
+scrapy/scrapy,,codecov/test-results-action,unknown,False
+scrapy/scrapy,,sphinx,BSD-2-Clause AND BSD-2-Clause-Views AND BSD-3-Clause,False
+scrapy/scrapy,,service-identity,unknown,False
+scrapy/scrapy,,w3lib,unknown,False
+scrapy/scrapy,,zope-interface,unknown,False

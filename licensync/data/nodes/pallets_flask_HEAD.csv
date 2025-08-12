@@ -1,0 +1,34 @@
+repo,sha,name,license,is_root
+pallets/flask,,pallets/flask,unknown,True
+pallets/flask,,com.github.pallets/flask,unknown,False
+pallets/flask,,kombu,BSD-2-Clause,False
+pallets/flask,,click-plugins,BSD-2-Clause AND BSD-3-Clause,False
+pallets/flask,,redis,MIT,False
+pallets/flask,,werkzeug,unknown,False
+pallets/flask,,pypa/gh-action-pypi-publish,unknown,False
+pallets/flask,,jinja2,unknown,False
+pallets/flask,,click-repl,unknown,False
+pallets/flask,,wcwidth,MIT,False
+pallets/flask,,six,MIT,False
+pallets/flask,,markupsafe,unknown,False
+pallets/flask,,async-timeout,Apache-2.0,False
+pallets/flask,,click-didyoumean,MIT,False
+pallets/flask,,billiard,BSD-2-Clause,False
+pallets/flask,,click,unknown,False
+pallets/flask,,actions/upload-artifact,unknown,False
+pallets/flask,,celery,BSD-2-Clause,False
+pallets/flask,,actions/setup-python,unknown,False
+pallets/flask,,astral-sh/setup-uv,unknown,False
+pallets/flask,,actions/download-artifact,unknown,False
+pallets/flask,,vine,BSD-2-Clause,False
+pallets/flask,,amqp,BSD-2-Clause,False
+pallets/flask,,dessant/lock-threads,unknown,False
+pallets/flask,,pre-commit-ci/lite-action,unknown,False
+pallets/flask,,actions/cache,unknown,False
+pallets/flask,,pytest,unknown,False
+pallets/flask,,flask,unknown,False
+pallets/flask,,itsdangerous,unknown,False
+pallets/flask,,prompt-toolkit,BSD-2-Clause AND BSD-3-Clause,False
+pallets/flask,,blinker,MIT,False
+pallets/flask,,pytz,MIT,False
+pallets/flask,,actions/checkout,unknown,False

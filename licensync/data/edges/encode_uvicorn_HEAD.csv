@@ -1,0 +1,32 @@
+repo,sha,parent,child,lic_parent,lic_child
+encode/uvicorn,,com.github.encode/uvicorn,types-click,unknown,Apache-2.0
+encode/uvicorn,,com.github.encode/uvicorn,mypy,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,mkdocs-material,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,actions/setup-python,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,ruff,unknown,0BSD AND Apache-2.0 AND BSD-3-Clause AND MIT
+encode/uvicorn,,com.github.encode/uvicorn,mkdocs-llmstxt,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,actions/download-artifact,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,wsproto,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,h11,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,typing-extensions,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,pypa/gh-action-pypi-publish,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,actions/upload-artifact,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,re-actors/alls-green,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,coverage-enable-subprocess,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,pytest-xdist,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,twine,unknown,Apache-2.0
+encode/uvicorn,,com.github.encode/uvicorn,mkdocstrings-python,unknown,ISC
+encode/uvicorn,,com.github.encode/uvicorn,websockets,unknown,BSD-2-Clause AND BSD-3-Clause
+encode/uvicorn,,com.github.encode/uvicorn,trustme,unknown,Apache-2.0 AND MIT
+encode/uvicorn,,com.github.encode/uvicorn,pytest-mock,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,pytest,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,coverage,unknown,Apache-2.0
+encode/uvicorn,,com.github.encode/uvicorn,types-pyyaml,unknown,Apache-2.0 AND MIT
+encode/uvicorn,,com.github.encode/uvicorn,actions/checkout,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,mkdocs,unknown,BSD-2-Clause AND BSD-3-Clause
+encode/uvicorn,,com.github.encode/uvicorn,cryptography,unknown,Apache-2.0 OR BSD-3-Clause OR (Apache-2.0 AND BSD-3-Clause)
+encode/uvicorn,,com.github.encode/uvicorn,httpx,unknown,BSD-3-Clause
+encode/uvicorn,,com.github.encode/uvicorn,click,unknown,unknown
+encode/uvicorn,,com.github.encode/uvicorn,a2wsgi,unknown,Apache-2.0
+encode/uvicorn,,com.github.encode/uvicorn,coverage-conditional-plugin,unknown,MIT
+encode/uvicorn,,com.github.encode/uvicorn,build,unknown,MIT

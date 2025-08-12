@@ -1,0 +1,34 @@
+repo,sha,name,license,is_root
+encode/uvicorn,,encode/uvicorn,unknown,True
+encode/uvicorn,,com.github.encode/uvicorn,unknown,False
+encode/uvicorn,,types-click,Apache-2.0,False
+encode/uvicorn,,mypy,MIT,False
+encode/uvicorn,,mkdocs-material,MIT,False
+encode/uvicorn,,actions/setup-python,unknown,False
+encode/uvicorn,,ruff,0BSD AND Apache-2.0 AND BSD-3-Clause AND MIT,False
+encode/uvicorn,,mkdocs-llmstxt,unknown,False
+encode/uvicorn,,actions/download-artifact,unknown,False
+encode/uvicorn,,wsproto,MIT,False
+encode/uvicorn,,h11,MIT,False
+encode/uvicorn,,typing-extensions,unknown,False
+encode/uvicorn,,pypa/gh-action-pypi-publish,unknown,False
+encode/uvicorn,,actions/upload-artifact,unknown,False
+encode/uvicorn,,re-actors/alls-green,unknown,False
+encode/uvicorn,,coverage-enable-subprocess,unknown,False
+encode/uvicorn,,pytest-xdist,MIT,False
+encode/uvicorn,,twine,Apache-2.0,False
+encode/uvicorn,,mkdocstrings-python,ISC,False
+encode/uvicorn,,websockets,BSD-2-Clause AND BSD-3-Clause,False
+encode/uvicorn,,trustme,Apache-2.0 AND MIT,False
+encode/uvicorn,,pytest-mock,MIT,False
+encode/uvicorn,,pytest,MIT,False
+encode/uvicorn,,coverage,Apache-2.0,False
+encode/uvicorn,,types-pyyaml,Apache-2.0 AND MIT,False
+encode/uvicorn,,actions/checkout,unknown,False
+encode/uvicorn,,mkdocs,BSD-2-Clause AND BSD-3-Clause,False
+encode/uvicorn,,cryptography,Apache-2.0 OR BSD-3-Clause OR (Apache-2.0 AND BSD-3-Clause),False
+encode/uvicorn,,httpx,BSD-3-Clause,False
+encode/uvicorn,,click,unknown,False
+encode/uvicorn,,a2wsgi,Apache-2.0,False
+encode/uvicorn,,coverage-conditional-plugin,MIT,False
+encode/uvicorn,,build,MIT,False

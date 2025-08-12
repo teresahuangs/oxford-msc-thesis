@@ -1,0 +1,29 @@
+repo,sha,parent,child,lic_parent,lic_child
+scrapy/scrapy,,com.github.scrapy/scrapy,defusedxml,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,actions/setup-python,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,codecov/codecov-action,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,cssselect,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,parsel,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,lxml,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,pypydispatcher,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,twisted,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,tldextract,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,pypa/gh-action-pypi-publish,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,sphinx-rtd-theme,unknown,MIT AND OFL-1.1
+scrapy/scrapy,,com.github.scrapy/scrapy,itemadapter,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,packaging,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,pyopenssl,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,pydispatcher,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,queuelib,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,cryptography,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,pre-commit/action,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,sphinx-rtd-dark-mode,unknown,MIT
+scrapy/scrapy,,com.github.scrapy/scrapy,sphinx-notfound-page,unknown,MIT
+scrapy/scrapy,,com.github.scrapy/scrapy,protego,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,itemloaders,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,actions/checkout,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,codecov/test-results-action,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,sphinx,unknown,BSD-2-Clause AND BSD-2-Clause-Views AND BSD-3-Clause
+scrapy/scrapy,,com.github.scrapy/scrapy,service-identity,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,w3lib,unknown,unknown
+scrapy/scrapy,,com.github.scrapy/scrapy,zope-interface,unknown,unknown
