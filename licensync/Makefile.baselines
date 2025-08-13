@@ -1,0 +1,75 @@
+# Baselines pipeline Makefile (use: make -f Makefile.baselines <target>)
+REPOS_FILE ?= data/repos.csv
+REPO_DIR ?= baselines/repos
+
+# clone all repos listed in data/repos.csv (format: owner/repo[,sha])
+.PHONY: baselines_clone
+baselines_clone:
+	mkdir -p $(REPO_DIR)
+	python3 - <<'PY'
+import csv, pathlib, subprocess
+p = pathlib.Path('$(REPOS_FILE)')
+rows = []
+if p.exists():
+    try:
+        rows = list(csv.DictReader(open(p)))
+    except Exception:
+        rows = [dict(repo=line.strip()) for line in open(p) if line.strip() and not line.startswith('#')]
+else:
+    # fallback to plain line list
+    rows = [dict(repo=line.strip()) for line in open('data/repos.csv') if line.strip() and not line.startswith('#')]
+
+for r in rows:
+    repo = (r.get('repo') or r.get('name') or '').strip()
+    sha  = (r.get('sha') or '').strip()
+    if not repo:
+        continue
+    url = f"https://github.com/{repo}.git"
+    out = f"$(REPO_DIR)/{repo.replace('/','_')}"
+    pathlib.Path(out).parent.mkdir(parents=True, exist_ok=True)
+    if not pathlib.Path(out).exists():
+        print('[clone]', repo)
+        subprocess.run(['git','clone','--depth','1', url, out], check=True)
+    if sha:
+        subprocess.run(['git','-C', out, 'fetch', 'origin', sha], check=False)
+        subprocess.run(['git','-C', out, 'checkout', sha], check=False)
+print('[ok] clone complete')
+PY
+
+
+.PHONY: syft
+syft:
+	@for d in $(REPO_DIR)/*; do \
+	  test -d $$d || continue; \
+	  echo "[syft] $$d"; \
+	  scripts/baselines/run_syft.sh $$d baselines/syft; \
+	done
+
+.PHONY: scancode
+scancode:
+	@for d in $(REPO_DIR)/*; do \
+	  test -d $$d || continue; \
+	  echo "[scancode] $$d"; \
+	  scripts/baselines/run_scancode.sh $$d baselines/scancode; \
+	done
+
+.PHONY: ort
+ort:
+	@for d in $(REPO_DIR)/*; do \
+	  test -d $$d || continue; \
+	  echo "[ort] $$d"; \
+	  scripts/baselines/run_ort.sh $$d baselines/ort; \
+	done
+
+.PHONY: align_spdx
+align_spdx:
+	python3 scripts/align/spdx_to_node_licenses.py --in-dir baselines/syft --out baselines/node_licenses_syft.csv
+	python3 scripts/align/spdx_to_node_licenses.py --in-dir baselines/scancode --out baselines/node_licenses_scancode.csv
+	python3 scripts/align/compare_licenses.py --syft baselines/node_licenses_syft.csv --scancode baselines/node_licenses_scancode.csv --out baselines/license_compare.csv
+
+.PHONY: align_ort
+align_ort:
+	python3 scripts/align/ort_to_pairs.py --ort-dir baselines/ort --out licensync/data/baselines/ort_pairs.csv
+
+.PHONY: baselines_all
+baselines_all: baselines_clone syft scancode ort align_spdx align_ort

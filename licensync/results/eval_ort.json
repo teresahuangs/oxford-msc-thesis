@@ -9,19 +9,19 @@
     ]
   },
   "baseline": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
     "ci95": [
-      1.0,
-      1.0
+      0.0,
+      0.0
     ]
   },
-  "delta_f1": 0.0,
+  "delta_f1": 1.0,
   "mcnemar": {
-    "b01": 0,
+    "b01": 42,
     "b10": 0,
-    "p": 1.0
+    "p": 4.547473508864641e-13
   },
   "n_labeled": 438,
   "n_evaluated": 42,
@@ -31,6 +31,6 @@
     "jurisdiction_override": null,
     "baseline_default": "false",
     "truth_path": "licensync/data/edge_truth_filled.csv",
-    "baseline_matrix": "licensync/data/baselines/spdx_matrix_min.csv"
+    "baseline_matrix": "licensync/data/baselines/ort_pairs.csv"
   }
 }
