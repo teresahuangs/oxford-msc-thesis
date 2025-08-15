@@ -1,0 +1,3124 @@
+{
+  "headers": [
+    {
+      "tool_name": "scancode-toolkit",
+      "tool_version": "32.0.2",
+      "options": {
+        "input": [
+          "."
+        ],
+        "--json-pp": "scancode-requests.json",
+        "--license": true,
+        "--package": true
+      },
+      "notice": "Generated with ScanCode and provided on an \"AS IS\" BASIS, WITHOUT WARRANTIES\nOR CONDITIONS OF ANY KIND, either express or implied. No content created from\nScanCode should be considered or used as legal advice. Consult an Attorney\nfor any legal advice.\nScanCode is a free software code scanning tool from nexB Inc. and others.\nVisit https://github.com/nexB/scancode-toolkit/ for support and download.",
+      "start_timestamp": "2025-08-14T150145.960831",
+      "end_timestamp": "2025-08-14T150206.165129",
+      "output_format_version": "3.0.0",
+      "duration": 20.204328298568726,
+      "message": null,
+      "errors": [],
+      "warnings": [],
+      "extra_data": {
+        "system_environment": {
+          "operating_system": "mac",
+          "cpu_architecture": "64",
+          "platform": "macOS-15.0.1-arm64-arm-64bit-Mach-O",
+          "platform_version": "Darwin Kernel Version 24.0.0: Tue Sep 24 23:39:07 PDT 2024; root:xnu-11215.1.12~1/RELEASE_ARM64_T6000",
+          "python_version": "3.13.6 (main, Aug  6 2025, 13:05:20) [Clang 17.0.0 (clang-1700.0.13.3)]"
+        },
+        "spdx_license_list_version": "3.20",
+        "files_count": 128
+      }
+    }
+  ],
+  "packages": [],
+  "dependencies": [
+    {
+      "purl": "pkg:pypi/pytest",
+      "extracted_requirement": "pytest>=2.8.0,<9",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/pytest?uuid=e8f0bfa3-641e-4769-9657-bea74625246b",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/pytest-cov",
+      "extracted_requirement": "pytest-cov",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/pytest-cov?uuid=21a8d20e-030e-4857-9468-4453976c95a1",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/pytest-httpbin@2.1.0",
+      "extracted_requirement": "pytest-httpbin==2.1.0",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": true,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/pytest-httpbin@2.1.0?uuid=274f6a2c-0610-493f-a9c9-1e2cc474e16c",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/httpbin",
+      "extracted_requirement": "httpbin~=0.10.0",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/httpbin?uuid=b749bab1-e838-4c50-80e4-00285a97e48e",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/trustme",
+      "extracted_requirement": "trustme",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/trustme?uuid=dcb50fdc-d31a-4400-8796-1b9ce1369ca5",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/wheel",
+      "extracted_requirement": "wheel",
+      "scope": "development",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/wheel?uuid=7496dc63-d915-47fc-9fa0-0cf150912214",
+      "for_package_uid": null,
+      "datafile_path": "requests/requirements-dev.txt",
+      "datasource_id": "pip_requirements"
+    },
+    {
+      "purl": "pkg:pypi/sphinx@7.2.6",
+      "extracted_requirement": "Sphinx==7.2.6",
+      "scope": "install",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": true,
+      "resolved_package": {},
+      "extra_data": {
+        "is_editable": false,
+        "link": null,
+        "hash_options": [],
+        "is_constraint": false,
+        "is_archive": null,
+        "is_wheel": false,
+        "is_url": null,
+        "is_vcs_url": null,
+        "is_name_at_url": false,
+        "is_local_path": null
+      },
+      "dependency_uid": "pkg:pypi/sphinx@7.2.6?uuid=1c186bae-1232-49a4-a663-a5ab4ce4ae68",
+      "for_package_uid": null,
+      "datafile_path": "requests/docs/requirements.txt",
+      "datasource_id": "pip_requirements"
+    }
+  ],
+  "license_detections": [
+    {
+      "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-c303006c-0c7c-913e-6e1a-d71a3c906ed1",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-08479bef-4de5-8be8-0987-1bec0c232b20",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache-2.0-0703a2d1-2ab7-4836-f269-c88aeeb0be1e",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-e267f9d9-ae62-e9c9-9cc2-8cd0a1e4928f",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "isc_and_apache_2_0-4378dabb-c7ca-631f-1eef-129391656ebe",
+      "license_expression": "isc AND apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "bsd_new-f8a892a9-1369-b8bb-24c5-2a0840ae8eef",
+      "license_expression": "bsd-new",
+      "detection_count": 1
+    },
+    {
+      "identifier": "bsd_simplified-4bf8e20d-1f7a-c8b7-5391-4d0a8769a8f6",
+      "license_expression": "bsd-simplified",
+      "detection_count": 1
+    },
+    {
+      "identifier": "lgpl_2_0_plus_and_mit-41784f65-6abf-c386-043d-853414c848e1",
+      "license_expression": "lgpl-2.0-plus AND mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0_and_unknown_license_reference-e56a9060-1118-4642-e914-4ab560e05895",
+      "license_expression": "apache-2.0 AND unknown-license-reference",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-ec759ae0-ea5a-f138-793e-388520e080c0",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-b5341561-91d6-6f19-7c24-0c2f52282c6d",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "unknown_license_reference-bf37b7f1-3af7-a3ff-a4b0-f2abd0d41206",
+      "license_expression": "unknown-license-reference",
+      "detection_count": 3
+    }
+  ],
+  "files": [
+    {
+      "path": "requests",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.coveragerc",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.git-blame-ignore-revs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.pre-commit-config.yaml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.readthedocs.yaml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/AUTHORS.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/HISTORY.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "mit AND apache-2.0",
+      "detected_license_expression_spdx": "MIT AND Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 278,
+              "end_line": 278,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        },
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1443,
+              "end_line": 1443,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_176.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_176.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-c303006c-0c7c-913e-6e1a-d71a3c906ed1"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.07,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/LICENSE",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 175,
+              "matched_length": 1405,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_70.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-08479bef-4de5-8be8-0987-1bec0c232b20"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 100.0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/MANIFEST.in",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/NOTICE",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/pyproject.toml",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": null,
+          "version": null,
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": null,
+          "release_date": null,
+          "parties": [],
+          "keywords": [],
+          "homepage_url": null,
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "apache-2.0",
+          "declared_license_expression_spdx": "Apache-2.0",
+          "license_detections": [
+            {
+              "license_expression": "apache-2.0",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 2,
+                  "end_line": 175,
+                  "matched_length": 1405,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "apache-2.0_70.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+                }
+              ],
+              "identifier": "apache_2_0-08479bef-4de5-8be8-0987-1bec0c232b20"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {},
+          "dependencies": [],
+          "repository_homepage_url": null,
+          "repository_download_url": null,
+          "api_data_url": null,
+          "datasource_id": "pypi_pyproject_toml",
+          "purl": null
+        }
+      ],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/requirements-dev.txt",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": null,
+          "version": null,
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": null,
+          "release_date": null,
+          "parties": [],
+          "keywords": [],
+          "homepage_url": null,
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "apache-2.0",
+          "declared_license_expression_spdx": "Apache-2.0",
+          "license_detections": [
+            {
+              "license_expression": "apache-2.0",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 2,
+                  "end_line": 175,
+                  "matched_length": 1405,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "apache-2.0_70.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+                }
+              ],
+              "identifier": "apache_2_0-08479bef-4de5-8be8-0987-1bec0c232b20"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {},
+          "dependencies": [
+            {
+              "purl": null,
+              "extracted_requirement": "--editable .[socks]",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": true,
+                "link": ".",
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": false,
+                "is_wheel": null,
+                "is_url": false,
+                "is_vcs_url": false,
+                "is_name_at_url": false,
+                "is_local_path": true
+              }
+            },
+            {
+              "purl": "pkg:pypi/pytest",
+              "extracted_requirement": "pytest>=2.8.0,<9",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            },
+            {
+              "purl": "pkg:pypi/pytest-cov",
+              "extracted_requirement": "pytest-cov",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            },
+            {
+              "purl": "pkg:pypi/pytest-httpbin@2.1.0",
+              "extracted_requirement": "pytest-httpbin==2.1.0",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": true,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            },
+            {
+              "purl": "pkg:pypi/httpbin",
+              "extracted_requirement": "httpbin~=0.10.0",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            },
+            {
+              "purl": "pkg:pypi/trustme",
+              "extracted_requirement": "trustme",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            },
+            {
+              "purl": "pkg:pypi/wheel",
+              "extracted_requirement": "wheel",
+              "scope": "development",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            }
+          ],
+          "repository_homepage_url": null,
+          "repository_download_url": null,
+          "api_data_url": null,
+          "datasource_id": "pip_requirements",
+          "purl": null
+        }
+      ],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/setup.cfg",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": null,
+          "version": null,
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": null,
+          "release_date": null,
+          "parties": [],
+          "keywords": [],
+          "homepage_url": null,
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "apache-2.0",
+          "declared_license_expression_spdx": "Apache-2.0",
+          "license_detections": [
+            {
+              "license_expression": "apache-2.0",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 2,
+                  "end_line": 2,
+                  "matched_length": 3,
+                  "match_coverage": 100.0,
+                  "matcher": "2-aho",
+                  "license_expression": "unknown-license-reference",
+                  "rule_identifier": "unknown-license-reference_see_license_at_manifest_1.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_see_license_at_manifest_1.RULE"
+                },
+                {
+                  "score": 100.0,
+                  "start_line": 2,
+                  "end_line": 175,
+                  "matched_length": 1405,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "apache-2.0_70.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+                },
+                {
+                  "score": 100.0,
+                  "start_line": 2,
+                  "end_line": 175,
+                  "matched_length": 1405,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "apache-2.0_70.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+                }
+              ],
+              "identifier": "apache-2.0-6a3759c8-bd02-93bc-ed4f-81b5d991636b",
+              "detection_log": [
+                "unknown-reference-to-local-file"
+              ]
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {},
+          "dependencies": [],
+          "repository_homepage_url": null,
+          "repository_download_url": null,
+          "api_data_url": null,
+          "datasource_id": "pypi_setup_cfg",
+          "purl": null
+        }
+      ],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 2,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown-license-reference_see_license_at_manifest_1.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_see_license_at_manifest_1.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 175,
+              "matched_length": 1405,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_70.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 175,
+              "matched_length": 1405,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_70.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+            }
+          ],
+          "identifier": "apache-2.0-6a3759c8-bd02-93bc-ed4f-81b5d991636b",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 5.77,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/setup.py",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": null,
+          "version": null,
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": "",
+          "release_date": null,
+          "parties": [],
+          "keywords": [
+            "Development Status :: 5 - Production/Stable",
+            "Environment :: Web Environment",
+            "Intended Audience :: Developers",
+            "Natural Language :: English",
+            "Operating System :: OS Independent",
+            "Programming Language :: Python",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.9",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.12",
+            "Programming Language :: Python :: 3.13",
+            "Programming Language :: Python :: 3.14",
+            "Programming Language :: Python :: 3 :: Only",
+            "Programming Language :: Python :: Implementation :: CPython",
+            "Programming Language :: Python :: Implementation :: PyPy",
+            "Topic :: Internet :: WWW/HTTP",
+            "Topic :: Software Development :: Libraries"
+          ],
+          "homepage_url": null,
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": "https://github.com/psf/requests",
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "apache-2.0",
+          "declared_license_expression_spdx": "Apache-2.0",
+          "license_detections": [
+            {
+              "license_expression": "apache-2.0",
+              "matches": [
+                {
+                  "score": 95.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 6,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "pypi_apache_no-version.RULE",
+                  "rule_relevance": 95,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_apache_no-version.RULE",
+                  "matched_text": "['License :: OSI Approved :: Apache Software License']"
+                }
+              ],
+              "identifier": "apache_2_0-e267f9d9-ae62-e9c9-9cc2-8cd0a1e4928f"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "classifiers:\n  - 'License :: OSI Approved :: Apache Software License'\n",
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {
+            "Documentation": "https://requests.readthedocs.io",
+            "python_requires": ">=3.9"
+          },
+          "dependencies": [
+            {
+              "purl": "pkg:pypi/charset-normalizer",
+              "extracted_requirement": "charset_normalizer<4,>=2",
+              "scope": "install",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:pypi/idna",
+              "extracted_requirement": "idna<4,>=2.5",
+              "scope": "install",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:pypi/urllib3",
+              "extracted_requirement": "urllib3<3,>=1.21.1",
+              "scope": "install",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:pypi/certifi",
+              "extracted_requirement": "certifi>=2017.4.17",
+              "scope": "install",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:pypi/pysocks",
+              "extracted_requirement": "PySocks!=1.5.7,>=1.5.6",
+              "scope": "socks",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:pypi/chardet",
+              "extracted_requirement": "chardet<6,>=3.0.2",
+              "scope": "use_chardet_on_py3",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            }
+          ],
+          "repository_homepage_url": null,
+          "repository_download_url": null,
+          "api_data_url": null,
+          "datasource_id": "pypi_setup_py",
+          "purl": null
+        }
+      ],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 95.0,
+              "start_line": 80,
+              "end_line": 80,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "pypi_apache_no-version.RULE",
+              "rule_relevance": 95,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_apache_no-version.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-e267f9d9-ae62-e9c9-9cc2-8cd0a1e4928f"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 1.61,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tox.ini",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/CODE_OF_CONDUCT.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/CONTRIBUTING.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/dependabot.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/FUNDING.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/ISSUE_TEMPLATE.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/SECURITY.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/ISSUE_TEMPLATE/Bug_report.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/ISSUE_TEMPLATE/Custom.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/ISSUE_TEMPLATE/Feature_request.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/close-issues.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/codeql-analysis.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/lint.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/lock-issues.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/publish.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/.github/workflows/run-tests.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/.nojekyll",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/api.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "isc AND apache-2.0",
+      "detected_license_expression_spdx": "ISC AND Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "isc AND apache-2.0",
+          "matches": [
+            {
+              "score": 99.0,
+              "start_line": 196,
+              "end_line": 196,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "isc",
+              "rule_identifier": "isc_22.RULE",
+              "rule_relevance": 99,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/isc_22.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 196,
+              "end_line": 196,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_175.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_175.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 196,
+              "end_line": 197,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_175.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_175.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 197,
+              "end_line": 198,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_175.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_175.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 200,
+              "end_line": 200,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "isc",
+              "rule_identifier": "isc_24.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/isc_24.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 201,
+              "end_line": 201,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "spdx_license_id_apache-2.0_for_apache-2.0.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/spdx_license_id_apache-2.0_for_apache-2.0.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 201,
+              "end_line": 201,
+              "matched_length": 7,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_353.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_353.RULE"
+            }
+          ],
+          "identifier": "isc_and_apache_2_0-4378dabb-c7ca-631f-1eef-129391656ebe"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 3.62,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/conf.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/index.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/make.bat",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/requirements.txt",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": null,
+          "version": null,
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": null,
+          "release_date": null,
+          "parties": [],
+          "keywords": [],
+          "homepage_url": null,
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": null,
+          "declared_license_expression_spdx": null,
+          "license_detections": [],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {},
+          "dependencies": [
+            {
+              "purl": "pkg:pypi/sphinx@7.2.6",
+              "extracted_requirement": "Sphinx==7.2.6",
+              "scope": "install",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": true,
+              "resolved_package": {},
+              "extra_data": {
+                "is_editable": false,
+                "link": null,
+                "hash_options": [],
+                "is_constraint": false,
+                "is_archive": null,
+                "is_wheel": false,
+                "is_url": null,
+                "is_vcs_url": null,
+                "is_name_at_url": false,
+                "is_local_path": null
+              }
+            }
+          ],
+          "repository_homepage_url": null,
+          "repository_download_url": null,
+          "api_data_url": null,
+          "datasource_id": "pip_requirements",
+          "purl": null
+        }
+      ],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_static",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_static/custom.css",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_static/requests-sidebar.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_templates",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_templates/hacks.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_templates/sidebarintro.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_templates/sidebarlogo.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_themes",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_themes/flask_theme_support.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/_themes/LICENSE",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "bsd-new AND bsd-simplified",
+      "detected_license_expression_spdx": "BSD-3-Clause AND BSD-2-Clause",
+      "license_detections": [
+        {
+          "license_expression": "bsd-new",
+          "matches": [
+            {
+              "score": 42.86,
+              "start_line": 13,
+              "end_line": 27,
+              "matched_length": 93,
+              "match_coverage": 42.86,
+              "matcher": "3-seq",
+              "license_expression": "bsd-new",
+              "rule_identifier": "bsd-new_74.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-new_74.RULE"
+            }
+          ],
+          "identifier": "bsd_new-f8a892a9-1369-b8bb-24c5-2a0840ae8eef"
+        },
+        {
+          "license_expression": "bsd-simplified",
+          "matches": [
+            {
+              "score": 61.2,
+              "start_line": 35,
+              "end_line": 45,
+              "matched_length": 112,
+              "match_coverage": 61.2,
+              "matcher": "3-seq",
+              "license_expression": "bsd-simplified",
+              "rule_identifier": "bsd-simplified_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-simplified_5.RULE"
+            }
+          ],
+          "identifier": "bsd_simplified-4bf8e20d-1f7a-c8b7-5391-4d0a8769a8f6"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 72.44,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/faq.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/out-there.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/recommended.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/release-process.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/support.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/updates.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/community/vulnerabilities.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/dev",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/dev/authors.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/dev/contributing.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/user",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/user/advanced.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "lgpl-2.0-plus AND mit",
+      "detected_license_expression_spdx": "LGPL-2.0-or-later AND MIT",
+      "license_detections": [
+        {
+          "license_expression": "lgpl-2.0-plus AND mit",
+          "matches": [
+            {
+              "score": 75.0,
+              "start_line": 719,
+              "end_line": 719,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "lgpl-2.0-plus",
+              "rule_identifier": "lgpl_bare_single_word.RULE",
+              "rule_relevance": 75,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl_bare_single_word.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 720,
+              "end_line": 720,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "lgpl-2.0-plus",
+              "rule_identifier": "lgpl-2.0-plus_240.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl-2.0-plus_240.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 724,
+              "end_line": 724,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "lgpl_2_0_plus_and_mit-41784f65-6abf-c386-043d-853414c848e1"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.08,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/user/authentication.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/user/install.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/docs/user/quickstart.rst",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/flower-of-life.jpg",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/kr-compressed.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/kr.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/LICENSE",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/psf-compressed.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/psf.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/requests-logo-compressed.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/requests-logo.ai",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/requests-logo.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/requests-logo.svg",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/ss-compressed.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/ext/ss.png",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/__init__.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 38,
+              "end_line": 38,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_65.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_65.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 38,
+              "end_line": 38,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown-license-reference_see-license_1.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_see-license_1.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 175,
+              "matched_length": 1405,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_70.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+            }
+          ],
+          "identifier": "apache-2.0-2d58e85d-610c-912e-ee55-6905c8f962db",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 1.08,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/__version__.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 12,
+              "end_line": 12,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_65.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_65.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-ec759ae0-ea5a-f138-793e-388520e080c0"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 10.53,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/_internal_utils.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/adapters.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/api.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 8,
+              "end_line": 8,
+              "matched_length": 7,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_171.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_171.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 175,
+              "matched_length": 1405,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_70.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_70.RULE"
+            }
+          ],
+          "identifier": "apache-2.0-904eb65e-695f-82fd-424e-e0516f19647a",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.86,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/auth.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/certs.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/compat.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/cookies.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/exceptions.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/help.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/hooks.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/models.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/packages.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/sessions.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/status_codes.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/structures.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/src/requests/utils.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": "unknown-license-reference",
+      "detected_license_expression_spdx": "LicenseRef-scancode-unknown-license-reference",
+      "license_detections": [
+        {
+          "license_expression": "unknown-license-reference",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 364,
+              "end_line": 364,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown-license-reference_240.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_240.RULE"
+            }
+          ],
+          "identifier": "unknown_license_reference-bf37b7f1-3af7-a3ff-a4b0-f2abd0d41206"
+        },
+        {
+          "license_expression": "unknown-license-reference",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 396,
+              "end_line": 396,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown-license-reference_240.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_240.RULE"
+            }
+          ],
+          "identifier": "unknown_license_reference-bf37b7f1-3af7-a3ff-a4b0-f2abd0d41206"
+        },
+        {
+          "license_expression": "unknown-license-reference",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 431,
+              "end_line": 431,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown-license-reference_240.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_240.RULE"
+            }
+          ],
+          "identifier": "unknown_license_reference-bf37b7f1-3af7-a3ff-a4b0-f2abd0d41206"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.21,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/__init__.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/compat.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/conftest.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_adapters.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_help.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_hooks.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_lowlevel.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_packages.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_requests.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_structures.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_testserver.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/test_utils.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/utils.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca/ca-private.key",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca/ca.cnf",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca/ca.crt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca/ca.srl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/ca/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server/cert.cnf",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server/server.csr",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server/server.key",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/expired/server/server.pem",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client/cert.cnf",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client/client.csr",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client/client.key",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client/client.pem",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/mtls/client/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server/cert.cnf",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server/server.csr",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server/server.key",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/certs/valid/server/server.pem",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/testserver",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/testserver/__init__.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "requests/tests/testserver/server.py",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    }
+  ]
+}

@@ -1,0 +1,5637 @@
+{
+  "headers": [
+    {
+      "tool_name": "scancode-toolkit",
+      "tool_version": "32.0.2",
+      "options": {
+        "input": [
+          "."
+        ],
+        "--json-pp": "scancode-express.json",
+        "--license": true,
+        "--package": true
+      },
+      "notice": "Generated with ScanCode and provided on an \"AS IS\" BASIS, WITHOUT WARRANTIES\nOR CONDITIONS OF ANY KIND, either express or implied. No content created from\nScanCode should be considered or used as legal advice. Consult an Attorney\nfor any legal advice.\nScanCode is a free software code scanning tool from nexB Inc. and others.\nVisit https://github.com/nexB/scancode-toolkit/ for support and download.",
+      "start_timestamp": "2025-08-14T150118.644357",
+      "end_timestamp": "2025-08-14T150143.429438",
+      "output_format_version": "3.0.0",
+      "duration": 24.785112857818604,
+      "message": null,
+      "errors": [],
+      "warnings": [],
+      "extra_data": {
+        "system_environment": {
+          "operating_system": "mac",
+          "cpu_architecture": "64",
+          "platform": "macOS-15.0.1-arm64-arm-64bit-Mach-O",
+          "platform_version": "Darwin Kernel Version 24.0.0: Tue Sep 24 23:39:07 PDT 2024; root:xnu-11215.1.12~1/RELEASE_ARM64_T6000",
+          "python_version": "3.13.6 (main, Aug  6 2025, 13:05:20) [Clang 17.0.0 (clang-1700.0.13.3)]"
+        },
+        "spdx_license_list_version": "3.20",
+        "files_count": 217
+      }
+    }
+  ],
+  "packages": [
+    {
+      "type": "npm",
+      "namespace": null,
+      "name": "express",
+      "version": "5.1.0",
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": "JavaScript",
+      "description": "Fast, unopinionated, minimalist web framework",
+      "release_date": null,
+      "parties": [
+        {
+          "type": "person",
+          "role": "author",
+          "name": "TJ Holowaychuk",
+          "email": "tj@vision-media.ca",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Aaron Heckmann",
+          "email": "aaron.heckmann+github@gmail.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Ciaran Jessup",
+          "email": "ciaranj@gmail.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Douglas Christopher Wilson",
+          "email": "doug@somethingdoug.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Guillermo Rauch",
+          "email": "rauchg@gmail.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Jonathan Ong",
+          "email": "me@jongleberry.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Roman Shtylman",
+          "email": "shtylman+expressjs@gmail.com",
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "contributor",
+          "name": "Young Jae Sim",
+          "email": "hanul@hanul.me",
+          "url": null
+        }
+      ],
+      "keywords": [
+        "express",
+        "framework",
+        "sinatra",
+        "web",
+        "http",
+        "rest",
+        "restful",
+        "router",
+        "app",
+        "api"
+      ],
+      "homepage_url": "https://expressjs.com/",
+      "download_url": "https://registry.npmjs.org/express/-/express-5.1.0.tgz",
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": "https://github.com/expressjs/express",
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "- MIT\n",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {},
+      "repository_homepage_url": "https://www.npmjs.com/package/express",
+      "repository_download_url": "https://registry.npmjs.org/express/-/express-5.1.0.tgz",
+      "api_data_url": "https://registry.npmjs.org/express/5.1.0",
+      "package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_paths": [
+        "express/package.json"
+      ],
+      "datasource_ids": [
+        "npm_package_json"
+      ],
+      "purl": "pkg:npm/express@5.1.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "purl": "pkg:npm/accepts",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/accepts?uuid=c6202c30-e5d5-40d7-ac46-e83a8eca37b1",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/body-parser",
+      "extracted_requirement": "^2.2.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/body-parser?uuid=e912e30b-288b-4de4-905c-02c49f0e7d84",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/content-disposition",
+      "extracted_requirement": "^1.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/content-disposition?uuid=d526cba3-a631-4475-b927-aabffa254d74",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/content-type",
+      "extracted_requirement": "^1.0.5",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/content-type?uuid=23aaa7f9-cf18-4bb6-b639-6985506ad523",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/cookie",
+      "extracted_requirement": "^0.7.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/cookie?uuid=d812204e-80a9-4484-bbd7-4f3b95f5ed78",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/cookie-signature",
+      "extracted_requirement": "^1.2.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/cookie-signature?uuid=a173f800-95dd-4576-975c-e03361b1b18c",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/debug",
+      "extracted_requirement": "^4.4.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/debug?uuid=17af8811-0785-4701-8c30-1e65b17b5b5f",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/depd",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/depd?uuid=ac482e6f-74bc-4bdc-880a-af1bba6eae59",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/encodeurl",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/encodeurl?uuid=8340d26b-17d2-42fc-bf02-66304090331d",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/escape-html",
+      "extracted_requirement": "^1.0.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/escape-html?uuid=b26a07d9-86fc-4d34-9360-bc881830088f",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/etag",
+      "extracted_requirement": "^1.8.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/etag?uuid=cb67683a-5674-4a2e-bba1-5f1a27d8a09f",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/finalhandler",
+      "extracted_requirement": "^2.1.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/finalhandler?uuid=c2b318a4-a41e-431d-8898-7c21f620f155",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/fresh",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/fresh?uuid=0b6eb23c-2808-401c-98c6-73aed65cf854",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/http-errors",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/http-errors?uuid=436dcadc-1783-4945-8c81-1140bf68eb54",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/merge-descriptors",
+      "extracted_requirement": "^2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/merge-descriptors?uuid=76a7e987-3227-43c8-a87d-639ddb612b0c",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/mime-types",
+      "extracted_requirement": "^3.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/mime-types?uuid=8bcf9326-043a-41ec-9d32-febca18e745b",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/on-finished",
+      "extracted_requirement": "^2.4.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/on-finished?uuid=dfe09cee-e721-4646-b243-ff15f4e5f605",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/once",
+      "extracted_requirement": "^1.4.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/once?uuid=09c658e5-b442-41db-8475-8d8c4069f297",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/parseurl",
+      "extracted_requirement": "^1.3.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/parseurl?uuid=2d04cb03-2654-404f-8c6f-3a4a0106d653",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/proxy-addr",
+      "extracted_requirement": "^2.0.7",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/proxy-addr?uuid=49be98eb-aeaa-4d4c-accc-8a89c10f89a2",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/qs",
+      "extracted_requirement": "^6.14.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/qs?uuid=ce09c9c4-3e0a-4d25-9f77-91d04e6308a1",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/range-parser",
+      "extracted_requirement": "^1.2.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/range-parser?uuid=fe6d65b1-a59f-42be-8515-30fe36722566",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/router",
+      "extracted_requirement": "^2.2.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/router?uuid=f2c3c0d8-3934-463a-9331-d3750edca7ab",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/send",
+      "extracted_requirement": "^1.1.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/send?uuid=b329e3f7-0c51-49b4-b6d0-c9ae7e0df84a",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/serve-static",
+      "extracted_requirement": "^2.2.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/serve-static?uuid=6c05a96c-e41f-4522-a263-1512cbb9636c",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/statuses",
+      "extracted_requirement": "^2.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/statuses?uuid=cfa5443f-7e0e-4734-8a58-6a917f72aa63",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/type-is",
+      "extracted_requirement": "^2.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/type-is?uuid=113e5e6b-5115-40e7-a43f-785ac06f6d4a",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/vary",
+      "extracted_requirement": "^1.1.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/vary?uuid=e61a4909-4e99-42aa-9bdb-bc8805c92562",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/after",
+      "extracted_requirement": "0.8.2",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/after?uuid=b4fb4fe5-5b73-4e33-87e9-32f9a43a51f3",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/connect-redis",
+      "extracted_requirement": "^8.0.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/connect-redis?uuid=6ae6e71d-adbb-4486-accb-e8164d23ce89",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/cookie-parser",
+      "extracted_requirement": "1.4.7",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/cookie-parser?uuid=6c4596a5-e459-41b2-a243-c9a6237266d3",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/cookie-session",
+      "extracted_requirement": "2.1.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/cookie-session?uuid=f2739f3d-e086-4470-aa6a-d3249d18bd80",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/ejs",
+      "extracted_requirement": "^3.1.10",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/ejs?uuid=2377a63f-1b50-4c51-9bb8-c98859ce9cd1",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/eslint",
+      "extracted_requirement": "8.47.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/eslint?uuid=65e308ea-249b-4168-b6ba-dbf92fed6a02",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/express-session",
+      "extracted_requirement": "^1.18.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/express-session?uuid=663729c2-4afb-427b-b12e-cb41fdae1714",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/hbs",
+      "extracted_requirement": "4.2.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/hbs?uuid=8ba20aa9-6c4d-4cb5-b2da-289f9a03b7c4",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/marked",
+      "extracted_requirement": "^15.0.3",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/marked?uuid=e6fd6019-2afa-4719-99ed-79952c5d5e5e",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/method-override",
+      "extracted_requirement": "3.0.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/method-override?uuid=004bdd88-1ae1-456b-9f24-3df3921c3410",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/mocha",
+      "extracted_requirement": "^10.7.3",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/mocha?uuid=2faed69a-1b89-4c87-bdd4-816c1c4a08c7",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/morgan",
+      "extracted_requirement": "1.10.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/morgan?uuid=6080fb24-4627-4e78-ace3-052ea3e7e94c",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/nyc",
+      "extracted_requirement": "^17.1.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/nyc?uuid=96bb541e-eccd-4d8e-9c7d-4d47df7fa765",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/pbkdf2-password",
+      "extracted_requirement": "1.2.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/pbkdf2-password?uuid=ffa6f2ff-bd84-411a-90fb-68c5cae9d64d",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/supertest",
+      "extracted_requirement": "^6.3.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/supertest?uuid=c3fd5e80-d1ab-48b4-af93-c06bcb6fcbb3",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/vhost",
+      "extracted_requirement": "~3.0.2",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/vhost?uuid=9d5cd2c3-16fe-4a56-8db4-7aede2d9fbf8",
+      "for_package_uid": "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474",
+      "datafile_path": "express/package.json",
+      "datasource_id": "npm_package_json"
+    }
+  ],
+  "license_detections": [
+    {
+      "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7",
+      "license_expression": "mit",
+      "detection_count": 7
+    },
+    {
+      "identifier": "mit-3ab5a1cd-6f73-3105-a815-d0d7c55b1922",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "mit-cacd5c0c-204a-85c2-affc-e4c125b2492a",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "mit-3fce6ea2-8abd-6c6b-3ede-a37af7c6efee",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "generic_cla-4d2aab61-7644-92b1-9c11-f5c19a8a9627",
+      "license_expression": "generic-cla",
+      "detection_count": 1
+    },
+    {
+      "identifier": "mit-bdcba66f-6e80-f7bd-7994-748183fe5693",
+      "license_expression": "mit",
+      "detection_count": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "express",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.editorconfig",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.eslintignore",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.eslintrc.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.npmrc",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/History.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 6,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 7.14,
+      "scan_errors": []
+    },
+    {
+      "path": "express/LICENSE",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_27.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_27.RULE"
+            }
+          ],
+          "identifier": "mit-3ab5a1cd-6f73-3105-a815-d0d7c55b1922"
+        },
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 7,
+              "end_line": 24,
+              "matched_length": 161,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit.LICENSE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE"
+            }
+          ],
+          "identifier": "mit-cacd5c0c-204a-85c2-affc-e4c125b2492a"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 84.97,
+      "scan_errors": []
+    },
+    {
+      "path": "express/package.json",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "npm",
+          "namespace": null,
+          "name": "express",
+          "version": "5.1.0",
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "JavaScript",
+          "description": "Fast, unopinionated, minimalist web framework",
+          "release_date": null,
+          "parties": [
+            {
+              "type": "person",
+              "role": "author",
+              "name": "TJ Holowaychuk",
+              "email": "tj@vision-media.ca",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Aaron Heckmann",
+              "email": "aaron.heckmann+github@gmail.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Ciaran Jessup",
+              "email": "ciaranj@gmail.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Douglas Christopher Wilson",
+              "email": "doug@somethingdoug.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Guillermo Rauch",
+              "email": "rauchg@gmail.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Jonathan Ong",
+              "email": "me@jongleberry.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Roman Shtylman",
+              "email": "shtylman+expressjs@gmail.com",
+              "url": null
+            },
+            {
+              "type": "person",
+              "role": "contributor",
+              "name": "Young Jae Sim",
+              "email": "hanul@hanul.me",
+              "url": null
+            }
+          ],
+          "keywords": [
+            "express",
+            "framework",
+            "sinatra",
+            "web",
+            "http",
+            "rest",
+            "restful",
+            "router",
+            "app",
+            "api"
+          ],
+          "homepage_url": "https://expressjs.com/",
+          "download_url": "https://registry.npmjs.org/express/-/express-5.1.0.tgz",
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": "https://github.com/expressjs/express",
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "- MIT\n",
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {},
+          "dependencies": [
+            {
+              "purl": "pkg:npm/accepts",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/body-parser",
+              "extracted_requirement": "^2.2.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/content-disposition",
+              "extracted_requirement": "^1.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/content-type",
+              "extracted_requirement": "^1.0.5",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/cookie",
+              "extracted_requirement": "^0.7.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/cookie-signature",
+              "extracted_requirement": "^1.2.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/debug",
+              "extracted_requirement": "^4.4.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/depd",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/encodeurl",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/escape-html",
+              "extracted_requirement": "^1.0.3",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/etag",
+              "extracted_requirement": "^1.8.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/finalhandler",
+              "extracted_requirement": "^2.1.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/fresh",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/http-errors",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/merge-descriptors",
+              "extracted_requirement": "^2.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/mime-types",
+              "extracted_requirement": "^3.0.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/on-finished",
+              "extracted_requirement": "^2.4.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/once",
+              "extracted_requirement": "^1.4.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/parseurl",
+              "extracted_requirement": "^1.3.3",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/proxy-addr",
+              "extracted_requirement": "^2.0.7",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/qs",
+              "extracted_requirement": "^6.14.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/range-parser",
+              "extracted_requirement": "^1.2.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/router",
+              "extracted_requirement": "^2.2.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/send",
+              "extracted_requirement": "^1.1.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/serve-static",
+              "extracted_requirement": "^2.2.0",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/statuses",
+              "extracted_requirement": "^2.0.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/type-is",
+              "extracted_requirement": "^2.0.1",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/vary",
+              "extracted_requirement": "^1.1.2",
+              "scope": "dependencies",
+              "is_runtime": true,
+              "is_optional": false,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/after",
+              "extracted_requirement": "0.8.2",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/connect-redis",
+              "extracted_requirement": "^8.0.1",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/cookie-parser",
+              "extracted_requirement": "1.4.7",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/cookie-session",
+              "extracted_requirement": "2.1.1",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/ejs",
+              "extracted_requirement": "^3.1.10",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/eslint",
+              "extracted_requirement": "8.47.0",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/express-session",
+              "extracted_requirement": "^1.18.1",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/hbs",
+              "extracted_requirement": "4.2.0",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/marked",
+              "extracted_requirement": "^15.0.3",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/method-override",
+              "extracted_requirement": "3.0.0",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/mocha",
+              "extracted_requirement": "^10.7.3",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/morgan",
+              "extracted_requirement": "1.10.1",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/nyc",
+              "extracted_requirement": "^17.1.0",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/pbkdf2-password",
+              "extracted_requirement": "1.2.1",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/supertest",
+              "extracted_requirement": "^6.3.0",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            },
+            {
+              "purl": "pkg:npm/vhost",
+              "extracted_requirement": "~3.0.2",
+              "scope": "devDependencies",
+              "is_runtime": false,
+              "is_optional": true,
+              "is_resolved": false,
+              "resolved_package": {},
+              "extra_data": {}
+            }
+          ],
+          "repository_homepage_url": "https://www.npmjs.com/package/express",
+          "repository_download_url": "https://registry.npmjs.org/express/-/express-5.1.0.tgz",
+          "api_data_url": "https://registry.npmjs.org/express/5.1.0",
+          "datasource_id": "npm_package_json",
+          "purl": "pkg:npm/express@5.1.0"
+        }
+      ],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 15,
+              "end_line": 15,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_30.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_30.RULE"
+            }
+          ],
+          "identifier": "mit-3fce6ea2-8abd-6c6b-3ede-a37af7c6efee"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.56,
+      "scan_errors": []
+    },
+    {
+      "path": "express/Readme.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "generic-cla AND mit",
+      "detected_license_expression_spdx": "LicenseRef-scancode-generic-cla AND MIT",
+      "license_detections": [
+        {
+          "license_expression": "generic-cla",
+          "matches": [
+            {
+              "score": 5.56,
+              "start_line": 145,
+              "end_line": 147,
+              "matched_length": 5,
+              "match_coverage": 5.56,
+              "matcher": "3-seq",
+              "license_expression": "generic-cla",
+              "rule_identifier": "generic-cla_28.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/generic-cla_28.RULE"
+            }
+          ],
+          "identifier": "generic_cla-4d2aab61-7644-92b1-9c11-f5c19a8a9627"
+        },
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 258,
+              "end_line": 260,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_31.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_31.RULE"
+            }
+          ],
+          "identifier": "mit-bdcba66f-6e80-f7bd-7994-748183fe5693"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.65,
+      "scan_errors": []
+    },
+    {
+      "path": "express/SECURITY.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/dependabot.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/workflows",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/workflows/ci.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/workflows/codeql.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/workflows/legacy.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/.github/workflows/scorecard.yml",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/benchmarks",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/benchmarks/Makefile",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/benchmarks/middleware.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/benchmarks/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/benchmarks/run",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/README.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth/views/foot.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth/views/head.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/auth/views/login.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/content-negotiation",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/content-negotiation/db.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/content-negotiation/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/content-negotiation/users.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/cookie-sessions",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/cookie-sessions/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/cookies",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/cookies/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/files",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/files/amazing.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/files/CCTV\u5927\u8d5b\u4e0a\u6d77\u5206\u8d5b\u533a.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/files/notes",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/downloads/files/notes/groceries.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/public",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/public/stylesheets",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/public/stylesheets/style.css",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/views/footer.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/views/header.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/ejs/views/users.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views/404.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views/500.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views/error_header.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views/footer.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/error-pages/views/index.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/hello-world",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/hello-world/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/markdown",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/markdown/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/markdown/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/markdown/views/index.md",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/multi-router",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/multi-router/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/multi-router/controllers",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/multi-router/controllers/api_v1.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/multi-router/controllers/api_v2.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/db.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/main",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/main/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/pet",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/pet/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/pet/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/pet/views/edit.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/pet/views/show.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user/views/edit.hbs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user/views/list.hbs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user/views/show.hbs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user-pet",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/controllers/user-pet/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/lib",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/lib/boot.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/public",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/public/style.css",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/views/404.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/mvc/views/5xx.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/online",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/online/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/params",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/params/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/resource",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/resource/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-map",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-map/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-middleware",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-middleware/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/post.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/site.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/user.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/public",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/public/style.css",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/footer.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/header.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/index.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/posts",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/posts/index.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/users",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/users/edit.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/users/index.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/route-separation/views/users/view.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/search",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/search/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/search/public",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/search/public/client.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/search/public/index.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/session",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/session/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/session/redis.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public/hello.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public/css",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public/css/style.css",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public/js",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/static-files/public/js/app.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/vhost",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/vhost/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-constructor",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-constructor/github-view.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-constructor/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-locals",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-locals/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-locals/user.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-locals/views",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/view-locals/views/index.ejs",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/web-service",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/examples/web-service/index.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/application.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 6,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.12,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/express.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 6,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 1.08,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/request.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 6,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.14,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/response.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 5,
+              "end_line": 5,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.07,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/utils.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 5,
+              "end_line": 5,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.34,
+      "scan_errors": []
+    },
+    {
+      "path": "express/lib/view.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 6,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_126.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_126.RULE"
+            }
+          ],
+          "identifier": "mit-4e7803e6-e54b-c9ca-bcd2-bee9755c0dd7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.43,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.all.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.engine.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.head.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.listen.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.locals.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.options.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.param.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.render.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.request.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.response.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.route.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.router.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.routes.error.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/app.use.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/config.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/exports.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/express.json.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/express.raw.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/express.static.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/express.text.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/express.urlencoded.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/middleware.basic.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/regression.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.accepts.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.acceptsCharsets.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.acceptsEncodings.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.acceptsLanguages.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.baseUrl.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.fresh.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.get.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.host.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.hostname.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.ip.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.ips.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.is.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.path.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.protocol.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.query.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.range.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.route.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.secure.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.signedCookies.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.stale.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.subdomains.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/req.xhr.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.append.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.attachment.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.clearCookie.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.cookie.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.download.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.format.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.get.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.json.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.jsonp.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.links.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.locals.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.location.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.redirect.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.render.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.send.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.sendFile.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.sendStatus.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.set.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.status.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.type.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/res.vary.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/Route.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/Router.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/utils.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/auth.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/content-negotiation.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/cookie-sessions.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/cookies.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/downloads.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/ejs.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/error-pages.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/error.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/hello-world.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/markdown.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/multi-router.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/mvc.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/params.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/resource.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/route-map.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/route-separation.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/vhost.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/acceptance/web-service.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/% of dogs.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/.name",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/broken.send",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/email.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/empty.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/name.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/name.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/nums.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/todo.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/todo.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/user.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/user.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/blog",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/blog/index.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/blog/post",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/blog/post/index.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/default_layout",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/default_layout/name.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/default_layout/user.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/local_layout",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/local_layout/user.tmpl",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/pets",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/pets/names.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/snow \u2603",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/snow \u2603/.gitkeep",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/users",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/users/index.html",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/fixtures/users/tobi.txt",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/support",
+      "type": "directory",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/support/env.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/support/tmpl.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "express/test/support/utils.js",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/express@5.1.0?uuid=4071993c-7416-442b-8bfa-cc5e8be8a474"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    }
+  ]
+}
