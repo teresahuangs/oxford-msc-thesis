@@ -9,6 +9,17 @@
 :- dynamic(is_network_copyleft/1).
 :- dynamic(is_non_commercial/1).
 :- dynamic(has_explicit_patent_grant/1).
+:- dynamic(has_strong_as_is_disclaimer/1).
+:- dynamic(is_public_domain_equivalent/1).
+
+% ===================================================================
+% %% -- Known Jurisdictions --
+% Defines the legal jurisdictions this system models.
+% ===================================================================
+is_jurisdiction(global).
+is_jurisdiction(us).
+is_jurisdiction(eu).
+is_jurisdiction(de). % Germany
 
 % ===================================================================
 % %% -- License Properties (Facts) --
@@ -19,8 +30,6 @@ is_permissive(apache2).
 is_permissive(bsd2).
 is_permissive(bsd3).
 is_permissive(isc).
-is_permissive(unlicense).
-is_permissive(cc0).
 is_permissive(bsd0).
 
 is_weak_copyleft(mpl2).
@@ -46,14 +55,34 @@ has_explicit_patent_grant(agpl3).
 has_explicit_patent_grant(mpl2).
 has_explicit_patent_grant(epl2).
 
+has_strong_as_is_disclaimer(mit).
+has_strong_as_is_disclaimer(bsd2).
+has_strong_as_is_disclaimer(bsd3).
+has_strong_as_is_disclaimer(isc).
+
+is_public_domain_equivalent(unlicense).
+is_public_domain_equivalent(cc0).
+
 % ===================================================================
 % %% -- Core Compatibility Rules (Jurisdiction-Aware) --
 % ===================================================================
 
-compatible(L, L, _J) :- !.
+% --- JURISDICTION-SPECIFIC RULES ---
 
+% JURISDICTION (US): Model stronger implied patent grant in US law for GPLv2.
 compatible(apache2, gpl2, us) :- !.
 compatible(gpl2, apache2, us) :- !.
+
+% JURISDICTION (DE): In Germany, strong "AS IS" disclaimers can conflict with
+% statutory warranty laws, making some combinations legally incompatible.
+compatible(L1, L2, de) :-
+    (is_strong_copyleft(L1); is_weak_copyleft(L1)),
+    has_strong_as_is_disclaimer(L2),
+    !, fail.
+
+% --- GLOBAL RULES (Fallback) ---
+
+compatible(L, L, _J) :- !.
 
 compatible(apache2, gpl2, _J) :- !, fail.
 compatible(gpl2, apache2, _J) :- !, fail.
@@ -74,23 +103,34 @@ compatible(L1, L2, _J) :- (is_strong_copyleft(L1); is_network_copyleft(L1)), is_
 compatible(L1, L2, _J) :- is_strong_copyleft(L1), is_strong_copyleft(L2), !, fail.
 
 % ===================================================================
-% %% -- Advanced Risk Analysis (Distinction-Level Feature) --
+% %% -- Advanced Risk Analysis (Jurisdiction-Aware) --
 % ===================================================================
 
-risk_level(_L1, _L2, _J, low) :- !. % Default risk is low.
+% JURISDICTION (EU): In the EU, "AS IS" disclaimers in permissive licenses
+% may not be fully enforceable under consumer protection laws, creating higher risk.
 risk_level(_L1, L2, eu, high) :- is_permissive(L2), !.
+
+% JURISDICTION (DE): In Germany, an authors "moral rights" are very strong.
+% Public domain dedications might be legally contested, creating risk.
+risk_level(_L1, L2, de, high) :- is_public_domain_equivalent(L2), !.
+
+% Default risk is low for all other cases.
+risk_level(_L1, _L2, _J, low).
 
 % ===================================================================
 % %% -- Main Entry Point for Python --
 % ===================================================================
 
 evaluate_pair(Lic1, Lic2, Juris, Result) :-
+    % Ensure the jurisdiction is known, otherwise default to global
+    ( is_jurisdiction(Juris) -> J = Juris ; J = global ),
     (Lic1 == unknown ; Lic2 == unknown),
     !,
     Result = unknown_license.
 
 evaluate_pair(Lic1, Lic2, Juris, Result) :-
-    (   compatible(Lic1, Lic2, Juris)
+    ( is_jurisdiction(Juris) -> J = Juris ; J = global ),
+    (   compatible(Lic1, Lic2, J)
     ->  Result = ok
     ;   Result = incompatible
     ).

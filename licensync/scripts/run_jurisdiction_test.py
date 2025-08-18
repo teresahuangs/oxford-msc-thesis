@@ -1,18 +1,58 @@
 #!/usr/bin/env python3
-# In licensync/scripts/final_verification.py
+# In licensync/scripts/final_verification_and_jurisdiction_test.py
 
 import pandas as pd
-from licensync.core.prolog_interface import evaluate_license_pair
-from licensync.scripts.advanced_eval import calculate_metrics, bootstrap_f1_ci # Re-use our metric functions
+import subprocess
+import re
+from pathlib import Path
 
-def run_final_verification():
-    """
-    Runs a final, self-contained evaluation using an embedded "golden" ground truth dataset.
-    This bypasses any issues with external CSV files.
-    """
-    print("--- Running Final Verification with Embedded Golden Dataset ---")
+# --- Self-Contained Helper Functions (to avoid any cross-file issues) ---
 
-    # The complete, clean, "golden" ground truth dataset
+PROLOG_FILE: Path = (
+    Path(__file__).resolve().parent.parent / "prolog_rules" / "rules.pl"
+).resolve()
+
+SPDX_TO_PROLOG = {
+    "mit": "mit", "apache-2.0": "apache2", "bsd-3-clause": "bsd3",
+    "bsd-2-clause": "bsd2", "mpl-2.0": "mpl2", "lgpl-3.0-only": "lgpl3",
+    "lgpl-2.1-only": "lgpl2", "gpl-3.0-only": "gpl3", "gpl-2.0-only": "gpl2",
+    "agpl-3.0-only": "agpl3", "epl-2.0": "epl2", "cc0-1.0": "cc0", "0bsd": "bsd0",
+    "sspl-1.0": "sspl", "commons-clause": "commons_clause", "cc-by-nc-sa-4.0": "cc_by_nc_sa_4",
+    "confluent-community-1.0": "confluent_community_1", "elastic-license-2.0": "elastic2",
+    "unlicense": "unlicense", "isc": "isc", "gpl-2.0-with-classpath-exception": "gpl2_classpath",
+    "bsl-1.1": "bsl1_1", "odbl-1.0": "odbl1", "cc-by-sa-4.0": "cc_by_sa_4",
+    "json": "json", "eupl-1.2": "eupl1_2", "unknown": "unknown",
+}
+
+def normalize_license(license_str: str) -> str:
+    s = str(license_str).strip().lower()
+    return SPDX_TO_PROLOG.get(s, s)
+
+def _atom(s: str) -> str:
+    if re.match(r"^[a-z][a-zA-Z0-9_]*$", s):
+        return s
+    else:
+        return f"'{s}'"
+
+def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> str:
+    norm_lic1 = normalize_license(lic1)
+    norm_lic2 = normalize_license(lic2)
+    l1 = _atom(norm_lic1)
+    l2 = _atom(norm_lic2)
+    j  = _atom(juris)
+    query = f"evaluate_pair({l1},{l2},{j},Result),write(Result),halt."
+    command = ["swipl", "-q", "-s", str(PROLOG_FILE), "-g", query]
+    try:
+        proc = subprocess.run(command, capture_output=True, text=True, timeout=10)
+        if proc.returncode != 0: return f"Error: {proc.stderr.strip()}"
+        return proc.stdout.strip()
+    except Exception as e:
+        return f"Error: {e}"
+
+# --- Main Experiment Logic ---
+def run_jurisdiction_experiment():
+    print("--- Running Final, Self-Contained Jurisdiction Flip Rate Experiment ---")
+
     golden_truth_data = [
         {'lic_parent': 'MIT', 'lic_child': 'Apache-2.0', 'label': 'compatible', 'jurisdiction': 'global', 'reason': 'Standard permissive combination'},
         {'lic_parent': 'ISC', 'lic_child': 'BSD-3-Clause', 'label': 'compatible', 'jurisdiction': 'global', 'reason': 'Two similar permissive licenses'},
@@ -47,61 +87,41 @@ def run_final_verification():
         {'lic_parent': 'MIT', 'lic_child': 'JSON', 'label': 'incompatible', 'jurisdiction': 'global', 'reason': 'Ambiguous License: The Good, not Evil use restriction makes the JSON license non-free'},
         {'lic_parent': 'EUPL-1.2', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'eu', 'reason': 'International License: The EUPL is designed for interoperability with GPL'}
     ]
-
-    baseline_path = "licensync/data/scancode-results.csv"
-    try:
-        baseline_df = pd.read_csv(baseline_path)
-    except FileNotFoundError:
-        print(f"Warning: Baseline file not found at {baseline_path}. Skipping comparison.")
-        baseline_df = pd.DataFrame()
-
     truth_df = pd.DataFrame(golden_truth_data)
-    y_true = (truth_df["label"].str.lower() == "compatible").tolist()
-    
-    # Get LicenSync predictions
-    licensync_preds = []
-    for _, row in truth_df.iterrows():
-        res = evaluate_license_pair(row["lic_parent"], row["lic_child"], row["jurisdiction"])
-        if "incompatible" in res:
-            licensync_preds.append(False)
-        elif res == "ok":
-            licensync_preds.append(True)
-        else:
-            licensync_preds.append(None) # Handle 'unknown' or errors
+    flips = []
 
-    # Calculate final metrics
-    metrics = calculate_metrics(y_true, licensync_preds)
-    _, f1_low, f1_high = bootstrap_f1_ci(y_true, licensync_preds)
+    for index, row in truth_df.iterrows():
+        lic1, lic2 = row['lic_parent'], row['lic_child']
+        
+        # Get the verdict for the 'global' jurisdiction
+        global_verdict = evaluate_license_pair(lic1, lic2, 'global')
+        
+        # Get verdicts for all other jurisdictions and check for flips
+        for juris in ['us', 'eu', 'de']:
+            juris_verdict = evaluate_license_pair(lic1, lic2, juris)
+            if juris_verdict != global_verdict and 'unknown' not in juris_verdict:
+                flips.append({
+                    "Test Case": f"{lic1} vs. {lic2}",
+                    "Global Verdict": global_verdict,
+                    "Jurisdiction": juris.upper(),
+                    "New Verdict": juris_verdict
+                })
+                print(f"  -> FLIP DETECTED ({juris.upper()}): {lic1} vs {lic2} changed from '{global_verdict}' to '{juris_verdict}'")
 
-    baseline_preds = []
-    for _, row in golden_truth_data.iterrows():
-        # Find the baseline's prediction for this specific license pair
-        match = baseline_df[
-            (baseline_df['lic_parent'] == row['lic_parent']) &
-            (baseline_df['lic_child'] == row['lic_child'])
-        ]
-        if not match.empty:
-            prediction_str = match.iloc[0]['prediction']
-            baseline_preds.append(prediction_str == 'compatible')
-        else:
-            baseline_preds.append(None) # Baseline had no opinion on this pair
-    
-    baseline_metrics = calculate_metrics(y_true, baseline_preds)
+    total_pairs = len(truth_df)
+    flip_count = len(flips)
+    flip_rate = (flip_count / total_pairs) if total_pairs > 0 else 0
 
-    # Build and print the final report table
-    results_data = [{
-        "Tool": "LicenSync",
-        "Precision": f"{metrics['precision']:.3f}",
-        "Recall": f"{metrics['recall']:.3f}",
-        "F1": f"{metrics['f1']:.3f}",
-        "F1 95% CI": f"[{f1_low:.3f}, {f1_high:.3f}]",
-        "Coverage": f"{metrics['coverage']:.1%}",
-    }]
-    results_df = pd.DataFrame(results_data)
-    
-    print("\\n--- Final Evaluation Report ---")
-    print("Based on the embedded 'golden' dataset.\\n")
-    print(results_df.to_markdown(index=False))
+    print(f"\\n--- Jurisdiction Flip Rate Report ---")
+    print(f"Found {flip_count} instances of flipped verdicts across {total_pairs} pairs.")
+    print(f"Overall Flip Rate: {flip_rate:.1%}\\n")
+
+    if flips:
+        flips_df = pd.DataFrame(flips)
+        print("Details of Flipped Pairs:")
+        print(flips_df.to_markdown(index=False))
 
 if __name__ == "__main__":
-    run_final_verification()
+    # You must paste your full `golden_truth_data` list into the script.
+    # The list is omitted here for brevity.
+    run_jurisdiction_experiment()
