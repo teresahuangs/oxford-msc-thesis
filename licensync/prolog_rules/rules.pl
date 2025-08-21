@@ -1,5 +1,7 @@
 % ===================================================================
-% LicenSync - JURISDICTION-AWARE Prolog Rules
+%
+% LicenSync v2.0 - Comprehensive JURISDICTION-AWARE Prolog Rules
+%
 % ===================================================================
 
 % --- Dynamic Predicates ---
@@ -8,129 +10,185 @@
 :- dynamic(is_strong_copyleft/1).
 :- dynamic(is_network_copyleft/1).
 :- dynamic(is_non_commercial/1).
-:- dynamic(has_explicit_patent_grant/1).
-:- dynamic(has_strong_as_is_disclaimer/1).
+:- dynamic(is_source_available/1).
 :- dynamic(is_public_domain_equivalent/1).
+:- dynamic(is_creative_commons/1).
+:- dynamic(has_explicit_patent_grant/1).
+:- dynamic(has_patent_retaliation/1).
+:- dynamic(has_strong_as_is_disclaimer/1).
+:- dynamic(requires_source_modification_disclosure/1).
+:- dynamic(is_gpl2_only/1).
+:- dynamic(allows_sublicensing/1).
 
 % ===================================================================
 % %% -- Known Jurisdictions --
-% Defines the legal jurisdictions this system models.
 % ===================================================================
 is_jurisdiction(global).
 is_jurisdiction(us).
 is_jurisdiction(eu).
-is_jurisdiction(de). % Germany
+is_jurisdiction(de).
+is_jurisdiction(uk).
 
 % ===================================================================
 % %% -- License Properties (Facts) --
+% Corrected to use unquoted atoms for compatibility with the Python interface.
 % ===================================================================
 
+% --- Permissive Licenses ---
 is_permissive(mit).
 is_permissive(apache2).
 is_permissive(bsd2).
 is_permissive(bsd3).
 is_permissive(isc).
 is_permissive(bsd0).
+is_permissive(unlicense).
+is_permissive(wtfpl).
+is_permissive(artistic2).
 
+% --- Weak Copyleft Licenses ---
 is_weak_copyleft(mpl2).
 is_weak_copyleft(lgpl2).
+is_weak_copyleft(lgpl2_or_later).
 is_weak_copyleft(lgpl3).
+is_weak_copyleft(lgpl3_or_later).
 is_weak_copyleft(epl2).
+is_weak_copyleft(cddl1).
+is_weak_copyleft(osl3).
 
+% --- Strong Copyleft Licenses ---
 is_strong_copyleft(gpl2).
+is_strong_copyleft(gpl2_or_later).
 is_strong_copyleft(gpl3).
+is_strong_copyleft(gpl3_or_later).
 
+% --- Network Copyleft Licenses ---
 is_network_copyleft(agpl3).
-is_network_copyleft(sspl).
+is_network_copyleft(agpl3_or_later).
+is_network_copyleft(sspl1).
+is_network_copyleft(rpl1_5).
 
+% --- Non-Commercial / Source-Available Licenses ---
 is_non_commercial(commons_clause).
 is_non_commercial(cc_by_nc_sa_4).
-is_non_commercial(confluent_community_1).
-is_non_commercial(elastic2).
+is_source_available(confluent_community_1).
+is_source_available(elastic2).
+is_source_available(bsl1_1).
 
-% -- Properties related to specific legal clauses --
+% --- Creative Commons (Code-incompatible) ---
+is_creative_commons(cc_by_nc_sa_4).
+is_creative_commons(cc_by_sa_4).
+is_creative_commons(cc_by_4).
+
+% --- Public Domain Equivalent ---
+is_public_domain_equivalent(unlicense).
+is_public_domain_equivalent(cc0).
+is_public_domain_equivalent(wtfpl).
+
+% --- Specific Legal Clause Properties ---
 has_explicit_patent_grant(apache2).
 has_explicit_patent_grant(gpl3).
+has_explicit_patent_grant(gpl3_or_later).
 has_explicit_patent_grant(agpl3).
+has_explicit_patent_grant(agpl3_or_later).
+has_explicit_patent_grant(lgpl3).
+has_explicit_patent_grant(lgpl3_or_later).
 has_explicit_patent_grant(mpl2).
 has_explicit_patent_grant(epl2).
+
+has_patent_retaliation(apache2).
+has_patent_retaliation(gpl3).
+has_patent_retaliation(gpl3_or_later).
+has_patent_retaliation(mpl2).
+has_patent_retaliation(cddl1).
 
 has_strong_as_is_disclaimer(mit).
 has_strong_as_is_disclaimer(bsd2).
 has_strong_as_is_disclaimer(bsd3).
 has_strong_as_is_disclaimer(isc).
 
-is_public_domain_equivalent(unlicense).
-is_public_domain_equivalent(cc0).
+requires_source_modification_disclosure(mpl2).
+requires_source_modification_disclosure(lgpl2).
+requires_source_modification_disclosure(lgpl3).
+
+is_gpl2_only(gpl2).
+is_gpl2_only(lgpl2).
+
+allows_sublicensing(apache2).
+allows_sublicensing(gpl3_or_later).
+allows_sublicensing(agpl3_or_later).
 
 % ===================================================================
 % %% -- Core Compatibility Rules (Jurisdiction-Aware) --
 % ===================================================================
 
-% --- JURISDICTION-SPECIFIC RULES ---
+% JURISDICTION (US): Model stronger implied patent grant for GPLv2.
+compatible(apache2, L, us) :- (L == gpl2; L == gpl2_or_later), !.
+compatible(L, apache2, us) :- (L == gpl2; L == gpl2_or_later), !.
 
-% JURISDICTION (US): Model stronger implied patent grant in US law for GPLv2.
-compatible(apache2, gpl2, us) :- !.
-compatible(gpl2, apache2, us) :- !.
+% JURISDICTION (DE): Strong "AS IS" disclaimers can conflict with statutory warranty laws.
+compatible(L1, L2, de) :- (is_strong_copyleft(L1); is_weak_copyleft(L1)), has_strong_as_is_disclaimer(L2), !, fail.
+compatible(L1, L2, de) :- has_strong_as_is_disclaimer(L1), (is_strong_copyleft(L2); is_weak_copyleft(L2)), !, fail.
 
-% JURISDICTION (DE): In Germany, strong "AS IS" disclaimers can conflict with
-% statutory warranty laws, making some combinations legally incompatible.
-compatible(L1, L2, de) :-
-    (is_strong_copyleft(L1); is_weak_copyleft(L1)),
-    has_strong_as_is_disclaimer(L2),
-    !, fail.
-
-% --- GLOBAL RULES (Fallback) ---
-
+% --- GLOBAL RULES ---
 compatible(L, L, _J) :- !.
 
-compatible(apache2, gpl2, _J) :- !, fail.
-compatible(gpl2, apache2, _J) :- !, fail.
+compatible(apache2, L, _J) :- (L == gpl2; L == gpl2_or_later), !, fail.
+compatible(L, apache2, _J) :- (L == gpl2; L == gpl2_or_later), !, fail.
 
-compatible(apache2, gpl3, _J) :- !.
-compatible(gpl3, apache2, _J) :- !.
-compatible(gpl3, agpl3, _J) :- !.
-compatible(agpl3, gpl3, _J) :- !.
+compatible(L1, L2, _J) :- is_gpl2_only(L1), (L2 == gpl3; L2 == gpl3_or_later), !, fail.
+compatible(L1, L2, _J) :- (L1 == gpl3; L1 == gpl3_or_later), is_gpl2_only(L2), !, fail.
 
-compatible(L1, L2, _J) :- is_non_commercial(L1), (is_permissive(L2); is_weak_copyleft(L2); is_strong_copyleft(L2)), !, fail.
-compatible(L1, L2, _J) :- (is_permissive(L1); is_weak_copyleft(L1); is_strong_copyleft(L1)), is_non_commercial(L2), !, fail.
+compatible(L1, L2, _J) :- (is_non_commercial(L1); is_source_available(L1)), \+ (is_non_commercial(L2); is_source_available(L2)), !, fail.
+compatible(L1, L2, _J) :- \+ (is_non_commercial(L1); is_source_available(L1)), (is_non_commercial(L2); is_source_available(L2)), !, fail.
 
-compatible(L1, L2, _J) :- is_permissive(L1), (is_permissive(L2); is_weak_copyleft(L2); is_strong_copyleft(L2); is_network_copyleft(L2)), !.
-compatible(L1, L2, _J) :- (is_permissive(L2); is_weak_copyleft(L2); is_strong_copyleft(L2); is_network_copyleft(L2)), is_permissive(L1), !.
+compatible(L1, L2, _J) :- is_creative_commons(L1), \+ is_public_domain_equivalent(L1), !, fail.
+compatible(L1, L2, _J) :- is_creative_commons(L2), \+ is_public_domain_equivalent(L2), !, fail.
+
+compatible(L1, L2, _J) :- is_strong_copyleft(L1), is_strong_copyleft(L2), L1 \== L2, !, fail.
+
+compatible(apache2, L, _J) :- (L == gpl3; L == gpl3_or_later), !.
+compatible(L, apache2, _J) :- (L == gpl3; L == gpl3_or_later), !.
+
+compatible(L1, L2, _J) :- (L1 == gpl3_or_later; L1 == lgpl3_or_later), (L2 == agpl3_or_later), !.
+compatible(L1, L2, _J) :- (L1 == agpl3_or_later), (L2 == gpl3_or_later; L2 == lgpl3_or_later), !.
+
+compatible(mpl2, L, _J) :- (is_strong_copyleft(L); is_network_copyleft(L)), !.
+compatible(L, mpl2, _J) :- (is_strong_copyleft(L); is_network_copyleft(L)), !.
+
+compatible(L1, L2, _J) :- is_permissive(L1), \+ (is_non_commercial(L2); is_source_available(L2)), !.
+compatible(L1, L2, _J) :- is_permissive(L2), \+ (is_non_commercial(L1); is_source_available(L1)), !.
+
 compatible(L1, L2, _J) :- is_weak_copyleft(L1), (is_strong_copyleft(L2); is_network_copyleft(L2)), !.
 compatible(L1, L2, _J) :- (is_strong_copyleft(L1); is_network_copyleft(L1)), is_weak_copyleft(L2), !.
 
-compatible(L1, L2, _J) :- is_strong_copyleft(L1), is_strong_copyleft(L2), !, fail.
-
 % ===================================================================
-% %% -- Advanced Risk Analysis (Jurisdiction-Aware) --
+% %% -- Advanced Risk Analysis --
 % ===================================================================
 
-% JURISDICTION (EU): In the EU, "AS IS" disclaimers in permissive licenses
-% may not be fully enforceable under consumer protection laws, creating higher risk.
-risk_level(_L1, L2, eu, high) :- is_permissive(L2), !.
-
-% JURISDICTION (DE): In Germany, an authors "moral rights" are very strong.
-% Public domain dedications might be legally contested, creating risk.
+risk_level(_L1, L2, eu, high) :- has_strong_as_is_disclaimer(L2), !.
+risk_level(_L1, L2, uk, medium) :- has_strong_as_is_disclaimer(L2), !.
 risk_level(_L1, L2, de, high) :- is_public_domain_equivalent(L2), !.
-
-% Default risk is low for all other cases.
+risk_level(_L1, L2, _J, medium) :- (L2 == gpl2; L2 == gpl2_or_later), \+ has_explicit_patent_grant(L2), !.
+risk_level(L1, L2, _J, business_risk) :- is_permissive(L1), (is_strong_copyleft(L2); is_network_copyleft(L2)), !.
+risk_level(L1, L2, _J, business_risk) :- (is_strong_copyleft(L1); is_network_copyleft(L1)), is_permissive(L2), !.
 risk_level(_L1, _L2, _J, low).
 
 % ===================================================================
-% %% -- Main Entry Point for Python --
+% %% -- Main Entry Point for Logic Evaluation --
 % ===================================================================
 
-evaluate_pair(Lic1, Lic2, Juris, Result) :-
-    % Ensure the jurisdiction is known, otherwise default to global
+evaluate_pair(Lic1, Lic2, Juris, Result, Risk) :-
     ( is_jurisdiction(Juris) -> J = Juris ; J = global ),
     (Lic1 == unknown ; Lic2 == unknown),
     !,
-    Result = unknown_license.
+    Result = unknown_license,
+    Risk = undefined.
 
-evaluate_pair(Lic1, Lic2, Juris, Result) :-
+evaluate_pair(Lic1, Lic2, Juris, Result, Risk) :-
     ( is_jurisdiction(Juris) -> J = Juris ; J = global ),
     (   compatible(Lic1, Lic2, J)
-    ->  Result = ok
-    ;   Result = incompatible
+    ->  Result = ok,
+        risk_level(Lic1, Lic2, J, Risk)
+    ;   Result = incompatible,
+        Risk = high
     ).

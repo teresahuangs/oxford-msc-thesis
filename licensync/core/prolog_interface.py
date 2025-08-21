@@ -32,26 +32,22 @@ def _atom(s: str) -> str:
 # ───────────────────────────────────────────────────────────────
 #  Public API
 # ───────────────────────────────────────────────────────────────
-def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> str:
+def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> dict:
     """
     Calls SWI-Prolog to evaluate a pair of licenses.
+    Returns a dictionary with 'result' and 'risk'.
     """
-    # CORRECTLY normalize the license strings first.
     norm_lic1 = normalize_license(lic1)
     norm_lic2 = normalize_license(lic2)
     norm_juris = normalize_license(juris)
 
-    # Convert the clean, normalized strings into Prolog atoms.
     l1 = _atom(norm_lic1)
     l2 = _atom(norm_lic2)
     j  = _atom(norm_juris)
     
-    # This print statement is left for final verification
-    print(f"[DEBUG] Correctly Normalized Atoms: l1={l1}, l2={l2}")
+    # NEW QUERY: Calls evaluate_pair/5 and formats the output as "result,risk"
+    query = f"evaluate_pair({l1},{l2},{j},Result,Risk), format('~w,~w', [Result, Risk]), halt."
 
-    query = f"evaluate_pair({l1},{l2},{j},Result),write(Result),halt."
-
-    # Use a fresh Prolog process for safety in evaluation
     command = ["swipl", "-q", "-s", str(PROLOG_FILE), "-g", query]
     try:
         proc = subprocess.run(
@@ -62,12 +58,18 @@ def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> str:
             timeout=10
         )
         if proc.returncode != 0:
-            return f"Error: Prolog Stderr: {proc.stderr.strip()}"
-        return proc.stdout.strip()
-    except FileNotFoundError:
-        return "Error: swipl_not_found"
+            return {"result": f"Error: {proc.stderr.strip()}", "risk": "undefined"}
+        
+        # Parse the "result,risk" output string
+        output = proc.stdout.strip().split(',')
+        if len(output) == 2:
+            return {"result": output[0], "risk": output[1]}
+        else:
+            return {"result": "unknown_license", "risk": "undefined"}
+
     except Exception as e:
-        return f"Error: {e}"
+        return {"result": f"Error: {e}", "risk": "undefined"}
+
 
 def obligations_for_license(lic: str, jur: str) -> List[str]:
     """Queries Prolog for the obligations of a given license."""
