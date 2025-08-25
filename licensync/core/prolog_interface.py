@@ -98,3 +98,12 @@ def get_risk_level(lic1: str, lic2: str, juris: str) -> str:
         return str(rows[0]["Result"]) if rows else "unknown"
     except Exception:
         return "unknown"
+    
+def verdict_and_obligs(lic1: str, lic2: str, jur: str):
+    """Utility to get the verdict and obligations for two licenses."""
+    # This function calls the other functions already in your file.
+    response = evaluate_license_pair(lic1, lic2, jur)
+    verdict = response.get("result", "unknown_license")
+    ob1 = obligations_for_license(lic1, jur)
+    ob2 = obligations_for_license(lic2, jur)
+    return verdict, ob1, ob2

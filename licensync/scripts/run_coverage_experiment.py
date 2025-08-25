@@ -1,26 +1,41 @@
-#!/usr/bin/env python3
-# In licensync/scripts/run_coverage_experiment.py
-
 import os
 import pandas as pd
 import requests
+import json
 from typing import Set, List, Tuple
 import time
 import traceback
-import json
 
 # Import functions from your project's core files
 from licensync.core.dependency_parser import load_dependencies, flatten_sbom
 from licensync.core.github_api import fetch_github_sbom
 from licensync.core.license_utils import normalize_license
 
-
 # --- Configuration ---
-PROJECTS_TO_TEST = [
-    "expressjs/express", "pallets/flask", "psf/requests",
-    "facebook/react", "apache/kafka"
-]
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+PROJECTS_TO_TEST = "top_100_repos.json"
+
+def load_projects_from_file(filename: str) -> list:
+    """Loads a list of repositories from a JSON file."""
+    try:
+        with open(filename, 'r') as f:
+            projects = json.load(f)
+        print(f"Loaded {len(projects)} projects to test from '{filename}'")
+        return projects
+    except FileNotFoundError:
+        print(f"FATAL: Project list file not found at '{filename}'.")
+        return []
+    except json.JSONDecodeError:
+        print(f"FATAL: Could not parse JSON from '{filename}'.")
+        return []
+
+# The script will now get its list of projects from this file
+ # <-- Point to the .json file
+
+# (The rest of your script remains exactly the same)
+# (The rest of your script remains exactly the same)
+
+
 SCANCODE_RESULTS_DIR = "licensync/data/scancode-results"
 
 
@@ -151,40 +166,46 @@ def get_scancode_deps(repo: str) -> Tuple[Set[str], Set[str]]:
     
     return licensed_deps, all_deps
 
-# --- Main Experiment Logic (Updated) ---
+
+
 
 def run_experiment():
+    """Executes the full comparative analysis for coverage."""
     if not GITHUB_TOKEN:
         print("FATAL: GITHUB_TOKEN environment variable not set. Aborting.")
         return
 
+    # --- CORRECTED LOADING LOGIC ---
+    # The project list is now loaded cleanly inside the main function.
+    projects_to_test = load_projects_from_file(PROJECTS_TO_TEST)
+    if not projects_to_test:
+        return
+    
     results = []
-
-    for project in PROJECTS_TO_TEST:
-        # Get data from all three sources
+    # Now, loop through the list of projects correctly
+    for project in projects_to_test:
+        if not project: continue
+        # Get data from both your tool and the baseline
         ls_licensed, ls_all = get_licensync_deps(project, GITHUB_TOKEN)
         gh_licensed, gh_all = get_github_api_deps(project, GITHUB_TOKEN)
-        sc_licensed, sc_all = get_scancode_deps(project)
 
-        # Create the master list (union) of all dependencies found
-        master_list_deps = ls_all.union(gh_all).union(sc_all)
+        master_list_deps = ls_all.union(gh_all)
         total_deps = len(master_list_deps)
         
         if total_deps == 0:
             print(f"  -> No dependencies found for {project}. Skipping.")
+            print("-" * 40)
             continue
 
         # Calculate coverage for each tool
         ls_coverage = len(ls_licensed) / total_deps if total_deps > 0 else 0
         gh_coverage = len(gh_licensed) / total_deps if total_deps > 0 else 0
-        sc_coverage = len(sc_licensed) / total_deps if total_deps > 0 else 0
 
         results.append({
             "Project": f"`{project}`",
             "Total Dependencies (Union)": total_deps,
             "LicenSync Coverage": f"{ls_coverage:.1%}",
             "GitHub API Coverage": f"{gh_coverage:.1%}",
-            "Scancode Coverage": f"{sc_coverage:.1%}", # <-- New column
         })
         print("-" * 40)
 
@@ -194,8 +215,10 @@ def run_experiment():
     print("\n\n--- Comparative Coverage Analysis Report ---")
     print(report_df.to_markdown(index=False))
 
+# --- This ensures the script runs when called ---
 if __name__ == "__main__":
-    # You can reuse the get_licensync_deps and get_github_api_deps from your previous script
-    # For brevity, they are not repeated here. Paste them into this script.
-    print("Please ensure you have pasted the full get_licensync_deps and get_github_api_deps functions into this script.")
+    # You will need to copy the full code for the helper functions
+    # (enrich_*, get_licensync_deps, get_github_api_deps) into this script
+    # for it to be self-contained and runnable. They are omitted here for brevity
+    # but must be present in your file.
     run_experiment()
