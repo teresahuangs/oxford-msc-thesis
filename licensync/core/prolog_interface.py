@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 import subprocess
+import re
 from pathlib import Path
-from typing import List
+from typing import List, Dict
 from pyswip import Prolog
 
 # Import the corrected normalizer
@@ -17,26 +18,27 @@ PROLOG_FILE: Path = (
 ).resolve()
 
 prolog = Prolog()
-prolog.consult(str(PROLOG_FILE))
+# Use a try-except block for safer consulting
+try:
+    prolog.consult(str(PROLOG_FILE))
+except Exception as e:
+    print(f"FATAL: Could not consult Prolog rules file at {PROLOG_FILE}. Error: {e}")
 
 # ───────────────────────────────────────────────────────────────
 #  Helpers
 # ───────────────────────────────────────────────────────────────
 def _atom(s: str) -> str:
-    """Return a lowercase Prolog atom, quoted if it contains a dash or needs quoting."""
-    # This function should only be called AFTER normalization
-    a = s.lower()
-    # Only quote if it's not a simple alphanumeric atom
-    return f"'{a}'" if not a.isalnum() else a
+    """Returns a string formatted as a valid Prolog atom."""
+    if re.match(r"^[a-z][a-zA-Z0-9_]*$", s):
+        return s
+    else:
+        return f"'{s}'"
 
 # ───────────────────────────────────────────────────────────────
 #  Public API
 # ───────────────────────────────────────────────────────────────
-def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> dict:
-    """
-    Calls SWI-Prolog to evaluate a pair of licenses.
-    Returns a dictionary with 'result' and 'risk'.
-    """
+def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> Dict[str, str]:
+    """Calls SWI-Prolog to evaluate a pair of licenses."""
     norm_lic1 = normalize_license(lic1)
     norm_lic2 = normalize_license(lic2)
     norm_juris = normalize_license(juris)
@@ -45,63 +47,33 @@ def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> dict:
     l2 = _atom(norm_lic2)
     j  = _atom(norm_juris)
     
-    # NEW QUERY: Calls evaluate_pair/5 and formats the output as "result,risk"
     query = f"evaluate_pair({l1},{l2},{j},Result,Risk), format('~w,~w', [Result, Risk]), halt."
-
     command = ["swipl", "-q", "-s", str(PROLOG_FILE), "-g", query]
     try:
-        proc = subprocess.run(
-            command,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=10
-        )
+        proc = subprocess.run(command, capture_output=True, text=True, timeout=10)
         if proc.returncode != 0:
             return {"result": f"Error: {proc.stderr.strip()}", "risk": "undefined"}
-        
-        # Parse the "result,risk" output string
         output = proc.stdout.strip().split(',')
-        if len(output) == 2:
-            return {"result": output[0], "risk": output[1]}
-        else:
-            return {"result": "unknown_license", "risk": "undefined"}
-
+        return {"result": output[0], "risk": output[1]} if len(output) == 2 else {"result": "unknown_license", "risk": "undefined"}
     except Exception as e:
         return {"result": f"Error: {e}", "risk": "undefined"}
-
 
 def obligations_for_license(lic: str, jur: str) -> List[str]:
     """Queries Prolog for the obligations of a given license."""
     norm_lic = normalize_license(lic)
     norm_jur = normalize_license(jur)
-    q = f"evaluate_license_obligations({_atom(norm_lic)},{_atom(norm_jur)},O)."
+    
+    # This is the correct query for the obligations predicate in your final rules.pl
+    q = f"obligation({_atom(norm_lic)}, Obligation)."
     try:
+        # Use the existing prolog instance for speed
         rows = list(prolog.query(q))
-        return [str(o) for o in rows[0]["O"]] if rows else []
+        return sorted([str(row["Obligation"]) for row in rows]) if rows else []
     except Exception:
         return []
 
-def get_risk_level(lic1: str, lic2: str, juris: str) -> str:
-    """
-    Call SWI-Prolog to get the jurisdiction-specific risk level.
-    Returns: "low" | "high" | "unknown"
-    """
-    l1 = _atom(lic1)
-    l2 = _atom(lic2)
-    j  = _atom(juris)
-
-    query = f"risk_level({l1},{l2},{j},Result)."
-    try:
-        # Use the existing prolog instance for speed
-        rows = list(prolog.query(query))
-        return str(rows[0]["Result"]) if rows else "unknown"
-    except Exception:
-        return "unknown"
-    
 def verdict_and_obligs(lic1: str, lic2: str, jur: str):
     """Utility to get the verdict and obligations for two licenses."""
-    # This function calls the other functions already in your file.
     response = evaluate_license_pair(lic1, lic2, jur)
     verdict = response.get("result", "unknown_license")
     ob1 = obligations_for_license(lic1, jur)

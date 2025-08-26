@@ -8,7 +8,7 @@ from licensync.core.dependency_parser import load_dependencies, flatten_sbom
 from licensync.core.github_api import fetch_github_sbom, fetch_repo_license_spdx
 from licensync.core.license_utils import normalize_license
 from licensync.core.graph_tools import build_graph_recursive, show_graph
-from licensync.core.graph_tools_overlap import build_overlap_graph, draw_overlap_graph # <-- New import
+from licensync.core.graph_tools_overlap import build_overlap_graph, draw_overlap_graph
 from licensync.core.prolog_interface import evaluate_license_pair, verdict_and_obligs, obligations_for_license
 from licensync.core.llm_explainer import generate_explanation
 
@@ -29,10 +29,6 @@ def compare_repos(
     gh_token: str = typer.Option(os.getenv("GITHUB_TOKEN"), "--gh-token", help="GitHub API token."),
     save_figs: bool = typer.Option(True, help="Save dependency graphs as images."),
 ):
-    """
-    Compares the full dependency trees of two repositories and generates graphs.
-    """
-    # (This is your full compare logic with graph-making)
     console.print(f"Comparing repositories [bold cyan]{repo1}[/] and [bold cyan]{repo2}[/]...", style="blue")
     
     deps1 = load_dependencies(pathlib.Path("."), repo1, gh_token)
@@ -45,9 +41,17 @@ def compare_repos(
     console.print(f"{repo2}: [bold yellow]{root2}[/] – Found {len(LB)} unique dependency licenses.")
 
     if save_figs:
-        # ... (your existing graph generation logic)
         console.print("\\nGenerating dependency graphs...", style="blue")
-        # ... etc.
+        figdir = pathlib.Path("figs"); figdir.mkdir(exist_ok=True)
+        edges1 = [dict(name=n, license=lic, parent=repo1) for (n, lic) in deps1]
+        edges2 = [dict(name=n, license=lic, parent=repo2) for (n, lic) in deps2]
+        G1 = build_graph_recursive(repo1, root1, edges1)
+        G2 = build_graph_recursive(repo2, root2, edges2)
+        path1 = str(figdir / f"{repo1.replace('/','_')}_graph.png")
+        path2 = str(figdir / f"{repo2.replace('/','_')}_graph.png")
+        show_graph(G1, f"{repo1} Dependency Licenses", outfile=path1)
+        show_graph(G2, f"{repo2} Dependency Licenses", outfile=path2)
+        console.print(f"✅ Graphs saved to '{path1}' and '{path2}'")
 
 # --- Second Command: explain ---
 @app.command(name="explain", help="Explain the compatibility between any two licenses.")
@@ -57,51 +61,59 @@ def explain_license_pair(
     jurisdiction: str = typer.Argument(..., help="The legal jurisdiction (e.g., 'global', 'us', 'eu').")
 ):
     """Provides a detailed explanation for the compatibility of two licenses."""
-    # (This is your full explain logic)
+    console.print(f"Analyzing: [bold cyan]{lic1}[/] vs. [bold cyan]{lic2}[/] in jurisdiction [bold green]{jurisdiction}[/]", justify="center")
+    
+    # --- CORRECTED LOGIC ---
+    # Use the 'verdict_and_obligs' function to get all data in one call
+    verdict, obligs1, obligs2 = verdict_and_obligs(lic1, lic2, jurisdiction)
+    
+    # Get the risk level separately
     response = evaluate_license_pair(lic1, lic2, jurisdiction)
-    # ... etc.
+    risk = response.get("risk", "undefined")
+    # --- END OF CORRECTION ---
+
+    verdict_style = "bold green" if verdict == "ok" else "bold red"
+    console.print(f"\\nVerdict: [{verdict_style}]{verdict.upper()}[/] | Assessed Risk: [yellow]{risk.capitalize()}[/]")
+
+    console.print(f"\\nObligations for [bold cyan]{lic1.upper()}[/]:")
+    if obligs1:
+        for ob in obligs1: console.print(f"  • {ob.replace('_', ' ').capitalize()}")
+    else:
+        console.print("  • (none)")
+
+    console.print(f"\\nObligations for [bold cyan]{lic2.upper()}[/]:")
+    if obligs2:
+        for ob in obligs2: console.print(f"  • {ob.replace('_', ' ').capitalize()}")
+    else:
+        console.print("  • (none)")
+
+    # Now, pass the correct obligations to the explainer
+    console.print("\\n[bold]Expert Explanation:[/bold]")
+    explanation = generate_explanation(lic1, lic2, jurisdiction, verdict, obligs1, obligs2)
+    console.print(f"[bright_black]{explanation}[/]")
+
 
 # --- Third Command: overlap ---
-# In licensync/cli/main.py
-
-# --- (your other imports and commands remain the same) ---
-
 @app.command(name="overlap", help="Create a single graph showing the dependency overlap between two repos.")
 def overlap_graphs(
     repo1: str = typer.Argument(..., help="First repository (e.g., 'owner/repo')."),
     repo2: str = typer.Argument(..., help="Second repository (e.g., 'owner/repo')."),
     gh_token: str = typer.Option(os.getenv("GITHUB_TOKEN"), "--gh-token", help="GitHub API token."),
 ):
-    """
-    Builds and saves a single graph visualizing shared and unique dependencies.
-    """
     console.print(f"Generating overlap graph for [bold cyan]{repo1}[/] and [bold cyan]{repo2}[/]...", style="blue")
-    
-    # 1. Get root licenses
     root1_lic = normalize_license(fetch_repo_license_spdx(repo1, gh_token) or "unknown")
     root2_lic = normalize_license(fetch_repo_license_spdx(repo2, gh_token) or "unknown")
     roots = [(repo1, root1_lic), (repo2, root2_lic)]
-
-    # 2. Get dependency lists using the resilient load_dependencies function
     deps1 = load_dependencies(pathlib.Path("."), repo1, gh_token)
     deps2 = load_dependencies(pathlib.Path("."), repo2, gh_token)
-
-    if not deps1 and not deps2:
-        console.print("Error: Could not retrieve dependency data for either repository.", style="bold red")
-        raise typer.Exit()
-        
-    # 3. Convert the dependency lists into the "edge" format needed for the graph
+    
     all_edges = []
-    for name, license in deps1:
-        all_edges.append({"name": name, "license": license, "parent": repo1})
-    for name, license in deps2:
-        all_edges.append({"name": name, "license": license, "parent": repo2})
-
-    # 4. Build and draw the graph
+    all_edges.extend([{"name": name, "license": license, "parent": repo1} for name, license in deps1])
+    all_edges.extend([{"name": name, "license": license, "parent": repo2} for name, license in deps2])
+    
     G = build_overlap_graph(roots, all_edges)
     figdir = pathlib.Path("figs"); figdir.mkdir(exist_ok=True)
     out_path = str(figdir / f"overlap_{repo1.replace('/','_')}_vs_{repo2.replace('/','_')}.png")
-    
     draw_overlap_graph(G, title=f"Dependency Overlap: {repo1} vs {repo2}", outfile=out_path)
     console.print(f"✅ Overlap graph saved to '{out_path}'")
 

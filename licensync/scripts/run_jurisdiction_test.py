@@ -24,7 +24,7 @@ def run_jurisdiction_experiment():
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'AGPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
     {'lic_parent': 'EPL-2.0', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
-
+    
     # --- Problematic & Famous Incompatibilities ---
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'GPL-2.0-only', 'label': 'incompatible', 'jurisdiction': 'global'},
     {'lic_parent': 'MIT', 'lic_child': 'Commons-Clause', 'label': 'incompatible', 'jurisdiction': 'us'},
@@ -50,12 +50,22 @@ def run_jurisdiction_experiment():
     {'lic_parent': 'EUPL-1.2', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'eu'},
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'ODbL-1.0', 'label': 'incompatible', 'jurisdiction': 'global'},
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'CC-BY-SA-4.0', 'label': 'compatible', 'jurisdiction': 'global'},
-    {'lic_parent': 'GPL-2.0-only', 'lic_child': 'Apache-2.0', 'label': 'incompatible', 'jurisdiction': 'global'}, # Duplicates for balance
+    {'lic_parent': 'GPL-2.0-only', 'lic_child': 'Apache-2.0', 'label': 'incompatible', 'jurisdiction': 'global'},
     {'lic_parent': 'GPL-3.0-only', 'lic_child': 'Apache-2.0', 'label': 'compatible', 'jurisdiction': 'global'},
     {'lic_parent': 'MIT', 'lic_child': 'AGPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
     {'lic_parent': 'Apache-2.0', 'lic_child': 'SSPL-1.0', 'label': 'incompatible', 'jurisdiction': 'eu'},
-]
-    
+
+    {'lic_parent': 'LGPL-2.1-only', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'MPL-2.0', 'lic_child': 'MIT', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'BSD-2-Clause', 'lic_child': 'GPL-2.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'Apache-2.0', 'lic_child': 'AGPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'GPL-3.0-only', 'lic_child': 'EPL-2.0', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'MIT', 'lic_child': 'Redis-Source-Available-2.0', 'label': 'incompatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'BSD-3-Clause', 'lic_child': 'BSD-3-Clause', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'GPL-2.0-only', 'lic_child': 'LGPL-2.1-only', 'label': 'compatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'AGPL-3.0-only', 'lic_child': 'SSPL-1.0', 'label': 'incompatible', 'jurisdiction': 'global'},
+    {'lic_parent': 'WTFPL', 'lic_child': 'GPL-3.0-only', 'label': 'compatible', 'jurisdiction': 'global'}
+] 
     truth_df = pd.DataFrame(golden_truth_data)
     
     # --- FIX: Create a set of unique license pairs to test ---
