@@ -7,26 +7,18 @@ from pathlib import Path
 from typing import List, Dict
 from pyswip import Prolog
 
-# Import the corrected normalizer
 from .license_utils import normalize_license
 
-# ───────────────────────────────────────────────────────────────
-#  Load rules.pl once per Python interpreter
-# ───────────────────────────────────────────────────────────────
 PROLOG_FILE: Path = (
     Path(__file__).resolve().parent.parent / "prolog_rules" / "rules.pl"
 ).resolve()
 
 prolog = Prolog()
-# Use a try-except block for safer consulting
 try:
     prolog.consult(str(PROLOG_FILE))
 except Exception as e:
     print(f"FATAL: Could not consult Prolog rules file at {PROLOG_FILE}. Error: {e}")
 
-# ───────────────────────────────────────────────────────────────
-#  Helpers
-# ───────────────────────────────────────────────────────────────
 def _atom(s: str) -> str:
     """Returns a string formatted as a valid Prolog atom."""
     if re.match(r"^[a-z][a-zA-Z0-9_]*$", s):
@@ -34,15 +26,11 @@ def _atom(s: str) -> str:
     else:
         return f"'{s}'"
 
-# ───────────────────────────────────────────────────────────────
-#  Public API
-# ───────────────────────────────────────────────────────────────
 def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> Dict[str, str]:
     """Calls SWI-Prolog to evaluate a pair of licenses."""
     norm_lic1 = normalize_license(lic1)
     norm_lic2 = normalize_license(lic2)
     norm_juris = normalize_license(juris)
-
     l1 = _atom(norm_lic1)
     l2 = _atom(norm_lic2)
     j  = _atom(norm_juris)
@@ -61,10 +49,11 @@ def evaluate_license_pair(lic1: str, lic2: str, juris: str) -> Dict[str, str]:
 def obligations_for_license(lic: str, jur: str) -> List[str]:
     """Queries Prolog for the obligations of a given license."""
     norm_lic = normalize_license(lic)
-    norm_jur = normalize_license(jur)
-    
-    # This is the correct query for the obligations predicate in your final rules.pl
-    q = f"obligation({_atom(norm_lic)}, Obligation)."
+    norm_jur = normalize_license(jur)  # Also normalize the jurisdiction
+
+    # CORRECTED: The query now includes the jurisdiction argument.
+    q = f"obligation({_atom(norm_lic)}, {_atom(norm_jur)}, Obligation)."
+
     try:
         # Use the existing prolog instance for speed
         rows = list(prolog.query(q))
