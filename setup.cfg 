@@ -2,7 +2,6 @@
 name = licensync
 version = 0.1.0
 description = License compatibility checker with jurisdiction support
-author = Teresa Huang
 license = MIT
 
 [options]
