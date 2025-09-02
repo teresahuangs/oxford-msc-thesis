@@ -63,14 +63,12 @@ def explain_license_pair(
     """Provides a detailed explanation for the compatibility of two licenses."""
     console.print(f"Analyzing: [bold cyan]{lic1}[/] vs. [bold cyan]{lic2}[/] in jurisdiction [bold green]{jurisdiction}[/]", justify="center")
     
-    # --- CORRECTED LOGIC ---
-    # Use the 'verdict_and_obligs' function to get all data in one call
+    
     verdict, obligs1, obligs2 = verdict_and_obligs(lic1, lic2, jurisdiction)
     
-    # Get the risk level separately
     response = evaluate_license_pair(lic1, lic2, jurisdiction)
     risk = response.get("risk", "undefined")
-    # --- END OF CORRECTION ---
+ 
 
     verdict_style = "bold green" if verdict == "ok" else "bold red"
     console.print(f"\\nVerdict: [{verdict_style}]{verdict.upper()}[/] | Assessed Risk: [yellow]{risk.capitalize()}[/]")

@@ -142,8 +142,6 @@ requires_notice_and_copyright(mpl2).
 % %% -- Core Compatibility Rules (Jurisdiction-Aware) --
 % ===================================================================
 
-% REMOVED: The incorrect rule stating apache2 was compatible with gpl2 in the US.
-% compatible(L, apache2, us) :- (L == gpl2; L == gpl2_or_later), !.
 
 % JURISDICTION (DE): Strong "AS IS" disclaimers can conflict with statutory warranty laws.
 compatible(L1, L2, de) :- (is_strong_copyleft(L1); is_weak_copyleft(L1)), has_strong_as_is_disclaimer(L2), !, fail.
