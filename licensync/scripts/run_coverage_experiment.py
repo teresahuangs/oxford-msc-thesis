@@ -175,8 +175,6 @@ def run_experiment():
         print("FATAL: GITHUB_TOKEN environment variable not set. Aborting.")
         return
 
-    # --- CORRECTED LOADING LOGIC ---
-    # The project list is now loaded cleanly inside the main function.
     projects_to_test = load_projects_from_file(PROJECTS_TO_TEST)
     if not projects_to_test:
         return

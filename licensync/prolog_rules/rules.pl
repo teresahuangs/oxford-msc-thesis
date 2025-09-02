@@ -1,7 +1,6 @@
 % ===================================================================
 %
 % LicenSync v2.0 - Comprehensive JURISDICTION-AWARE Prolog Rules
-% (Corrected and Enhanced Version)
 %
 % ===================================================================
 

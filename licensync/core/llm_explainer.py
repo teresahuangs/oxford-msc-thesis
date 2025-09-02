@@ -17,7 +17,6 @@ def _fmt_obligations(obligations: List[str]) -> str:
         return "  • No specific obligations found."
     return "\\n".join(f"  • {o.capitalize().replace('_', ' ')}" for o in obligations)
 
-# --- CORRECTED Chat function with MODERN OPENAI SYNTAX ---
 def _chat(messages: List[Dict[str, Any]]) -> str:
     """
     Connects to the OpenAI API using the modern (v1.0.0+) library syntax.
@@ -25,7 +24,6 @@ def _chat(messages: List[Dict[str, Any]]) -> str:
     if not OPENAI_KEY:
         return "[LLM explanation unavailable: OPENAI_API_KEY not set]"
     
-    # This is the new, correct way to import and instantiate the client
     try:
         from openai import OpenAI
         client = OpenAI(api_key=OPENAI_KEY)

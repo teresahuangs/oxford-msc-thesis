@@ -51,11 +51,9 @@ def obligations_for_license(lic: str, jur: str) -> List[str]:
     norm_lic = normalize_license(lic)
     norm_jur = normalize_license(jur)  # Also normalize the jurisdiction
 
-    # CORRECTED: The query now includes the jurisdiction argument.
     q = f"obligation({_atom(norm_lic)}, {_atom(norm_jur)}, Obligation)."
 
     try:
-        # Use the existing prolog instance for speed
         rows = list(prolog.query(q))
         return sorted([str(row["Obligation"]) for row in rows]) if rows else []
     except Exception:

@@ -91,8 +91,7 @@ def load_dependencies(local_path: Optional[pathlib.Path], # Allow None for gh_re
             content = fetch_text_from_repo(gh_repo, path, gh_token)
             if not content: continue
             
-            # --- MODIFIED LOGIC ---
-            # Identify the ecosystem from the filename
+            
             if path.endswith(('requirements.txt', 'pyproject.toml')):
                 ecosystem = "pypi"
                 parsed_deps = parse_pyproject(content) if 'pyproject' in path else parse_requirements_text(content)
@@ -115,9 +114,7 @@ def load_dependencies(local_path: Optional[pathlib.Path], # Allow None for gh_re
     return uniq_deps
 
 
-# You need flatten_sbom in this file as well, assuming it wasn't here before
 def flatten_sbom(owner_repo: str, sbom: Dict) -> List[Dict]:
-    # (Ensure the flatten_sbom function from your original file is present here)
     id_to_name: Dict[str, str] = {}
     id_to_license: Dict[str, str] = {}
     for p in sbom.get("packages", []):
